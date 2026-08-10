@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ð Ranking Produtividade â Turno Noturno PE01 | 10/08/2026</title>
+<style>
+  :root {
+    --ml-yellow: #FFE600;
+    --ml-blue: #3483FA;
+    --ml-green: #00A650;
+    --ml-dark: #1A1A2E;
+    --ml-card: #16213E;
+    --ml-surface: #0F3460;
+    --ml-text: #E8E8E8;
+    --ml-muted: #9CA3AF;
+    --gold: #FFD700;
+    --silver: #C0C0C0;
+    --bronze: #CD7F32;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--ml-dark);
+    color: var(--ml-text);
+    min-height: 100vh;
+    padding: 24px 16px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--ml-yellow);
+    color: #000;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    color: var(--ml-muted);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .generated {
+    color: var(--ml-muted);
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  /* KPI cards */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .kpi-card {
+    background: var(--ml-card);
+    border: 1px solid rgba(52,131,250,0.2);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ml-muted);
+    margin-bottom: 8px;
+  }
+
+  .kpi-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--ml-yellow);
+  }
+
+  .kpi-sub {
+    font-size: 11px;
+    color: var(--ml-muted);
+    margin-top: 4px;
+  }
+
+  /* Podium */
+  .podium-section {
+    max-width: 900px;
+    margin: 0 auto 32px;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--ml-blue);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(52,131,250,0.2);
+  }
+
+  .podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .podium-item {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    padding: 20px 12px 24px;
+    position: relative;
+  }
+
+  .podium-item.p1 { background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; height: 180px; }
+  .podium-item.p2 { background: linear-gradient(135deg, #C0C0C0, #888); color: #000; height: 150px; }
+  .podium-item.p3 { background: linear-gradient(135deg, #CD7F32, #8B4513); color: #fff; height: 120px; }
+
+  .podium-medal { font-size: 28px; margin-bottom: 8px; }
+  .podium-op { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .podium-units { font-size: 22px; font-weight: 800; }
+  .podium-units-label { font-size: 10px; opacity: 0.7; }
+  .podium-prod { font-size: 11px; margin-top: 4px; opacity: 0.85; font-weight: 600; }
+
+  /* Table */
+  .table-section {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(52,131,250,0.15);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  thead th {
+    background: var(--ml-surface);
+    color: var(--ml-yellow);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 12px 16px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+  }
+
+  thead th:first-child { border-radius: 12px 0 0 0; }
+  thead th:last-child  { border-radius: 0 12px 0 0; }
+
+  tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.15s;
+  }
+
+  tbody tr:hover { background: rgba(52,131,250,0.08); }
+  tbody tr.top-3 { background: rgba(255,214,0,0.05); }
+
+  td {
+    padding: 11px 16px;
+    color: var(--ml-text);
+  }
+
+  td.rank {
+    font-weight: 800;
+    font-size: 15px;
+    min-width: 54px;
+  }
+
+  .rank-medal { font-size: 18px; }
+
+  .op-id {
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--ml-muted);
+  }
+
+  .bar-cell { width: 120px; }
+
+  .bar-wrap {
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+  }
+
+  .bar {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--ml-blue), var(--ml-yellow));
+    transition: width 0.3s;
+  }
+
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .highlight { color: var(--ml-yellow); font-weight: 700; }
+  .green { color: var(--ml-green); font-weight: 600; }
+
+  .footer {
+    text-align: center;
+    margin-top: 32px;
+    color: var(--ml-muted);
+    font-size: 11px;
+  }
+
+  .footer strong { color: var(--ml-yellow); }
+
+  /* PNG-friendly snapshot area */
+  #snapshot {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+<div id="snapshot">
+  <div class="header">
+    <div class="badge">ð Turno Noturno</div>
+    <h1>ð Ranking de Produtividade â PE01</h1>
+    <p class="subtitle">Centro LogÃ­stico BRPE01 &nbsp;Â·&nbsp; 10 de agosto de 2026</p>
+    <p class="subtitle">Fonte: <code>BT_OPC_PROD_PRODUCTIVITY</code> Â· ReferÃªncia: START_DATE = 2026-08-10</p>
+    <p class="generated">Gerado em: 10/08/2026 Â· por Claude (Cowork) Â· jorssiqueira@mercadolivre.com</p>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Operadores</div>
+      <div class="kpi-value">100</div>
+      <div class="kpi-sub">no turno</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">LÃ­der do Turno</div>
+      <div class="kpi-value">2171671</div>
+      <div class="kpi-sub">14.243 unidades</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Prod. MÃ©dia LÃ­quida</div>
+      <div class="kpi-value" id="avg-prod">â</div>
+      <div class="kpi-sub">un/h (top 100)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Total de Unidades</div>
+      <div class="kpi-value" id="total-units">â</div>
+      <div class="kpi-sub">processadas</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">UtilizaÃ§Ã£o MÃ©dia</div>
+      <div class="kpi-value" id="avg-util">â</div>
+      <div class="kpi-sub">% ocupaÃ§Ã£o</div>
+    </div>
+  </div>
+
+  <!-- Podium -->
+  <div class="podium-section">
+    <div class="section-title">ð¥ PÃ³dio do Turno</div>
+    <div class="podium">
+      <div class="podium-item p2">
+        <div class="podium-medal">ð¥</div>
+        <div class="podium-op" id="p2-op">2020872</div>
+        <div class="podium-units" id="p2-units">5.701</div>
+        <div class="podium-units-label">unidades</div>
+        <div class="podium-prod" id="p2-prod">1.847,81 un/h</div>
+      </div>
+      <div class="podium-item p1">
+        <div class="podium-medal">ð¥</div>
+        <div class="podium-op" id="p1-op">2171671</div>
+        <div class="podium-units" id="p1-units">14.243</div>
+        <div class="podium-units-label">unidades</div>
+        <div class="podium-prod" id="p1-prod">4.617,69 un/h</div>
+      </div>
+      <div class="podium-item p3">
+        <div class="podium-medal">ð¥</div>
+        <div class="podium-op" id="p3-op">2210902</div>
+        <div class="podium-units" id="p3-units">1.716</div>
+        <div class="podium-units-label">unidades</div>
+        <div class="podium-prod" id="p3-prod">569,47 un/h</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Table -->
+  <div class="table-section">
+    <div class="section-title">ð Ranking Completo â Top 100</div>
+    <div class="table-wrap">
+      <table id="ranking-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Operador ID</th>
+            <th class="num">Unidades</th>
+            <th class="num">Prod. LÃ­quida</th>
+            <th class="num">Prod. Efetiva</th>
+            <th class="num">Horas LÃ­quidas</th>
+            <th class="num">UtilizaÃ§Ã£o %</th>
+            <th class="bar-cell">Desempenho</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    Dados extraÃ­dos de <strong>meli-bi-data.WHOWNER.BT_OPC_PROD_PRODUCTIVITY</strong> Â·
+    START_DATE = 2026-08-10 Â· LOGISTIC_CENTER_ID = BRPE01<br>
+    Job ID: mcp_job_35828e16-2209-485e-b5c2-79afaf12b289
+  </div>
+</div>
+
+<script>
+const data = [
+  {ranking:1,OPERATOR_ID:"2171671",total_units:14243,total_net_hours:3.08,net_productivity:4617.69,avg_eff_prod:142.95,utilization_pct:62.7},
+  {ranking:2,OPERATOR_ID:"2020872",total_units:5701,total_net_hours:3.09,net_productivity:1847.81,avg_eff_prod:158.18,utilization_pct:40.1},
+  {ranking:3,OPERATOR_ID:"2210902",total_units:1716,total_net_hours:3.01,net_productivity:569.47,avg_eff_prod:605.49,utilization_pct:81.3},
+  {ranking:4,OPERATOR_ID:"2515011",total_units:945,total_net_hours:1.77,net_productivity:532.98,avg_eff_prod:670.53,utilization_pct:72.6},
+  {ranking:5,OPERATOR_ID:"2351858",total_units:1563,total_net_hours:3.02,net_productivity:518.03,avg_eff_prod:600.96,utilization_pct:66.0},
+  {ranking:6,OPERATOR_ID:"2447348",total_units:1447,total_net_hours:3.03,net_productivity:477.08,avg_eff_prod:573.61,utilization_pct:69.9},
+  {ranking:7,OPERATOR_ID:"2515082",total_units:1428,votal_net_hours:3.01,net_productivity:473.98,avg_eff_prod:567.58,utilization_pct:72.8},
+  {ranking:8,OPERATOR_ID:"2210910",total_units:1400,total_net_hours:3.28,net_productivity:426.5,avg_eff_prod:512.19,utilization_pct:88.9},
+  {ranking:9,OPERATOR_ID:"2447052",total_units:1250,total_net_hours:3.03,net_productivity:412.69,avg_eff_prod:523.44,utilization_pct:77.7},
+  {ranking:10,OPERATOR_ID:"2370236",total_units:1244,total_net_hours:3.02,net_productivity:412.53,avg_eff_prod:571.7,utilization_pct:63.4},
+  {ranking:11,OPERATOR_ID:"2171687",total_units:1167,total_net_hours:3.04,net_productivity:384.41,avg_eff_prod:469.98,utilization_pct:71.5},
+  {ranking:12,OPERATOR_ID:"2536053",total_units:1145,total_net_hours:3.02,net_productivity:379.66,avg_eff_prod:477.74,utilization_pct:71.0},
+  {ranking:13,OPERATOR_ID:"2370231",total_units:1032,total_net_hours:2.96,net_productivity:348.13,avg_eff_prod:611.13,utilization_pct:79.3},
+  {ranking:14,OPERATOR_ID:"2536630",total_units:990,total_net_hours:3.03,net_productivity:326.73,avg_eff_prod:423.87,utilization_pct:71.4},
+  {ranking:15,OPERATOR_ID:"2515006",total_units:575,total_net_hours:1.77,net_productivity:325.73,avg_eff_prod:721.62,utilization_pct:66.0},
+  {ranking:16,OPERATOR_ID:"2282135",total_units:950,total_net_hours:2.97,net_productivity:320.37,avg_eff_prod:346.93,utilization_pct:70.7},
+  {ranking:17,OPERATOR_ID:"2428336",total_units:1027,total_net_hours:3.28,net_productivity:313.03,avg_eff_prod:369.74,utilization_pct:74.1},
+  {ranking:18,OPERATOR_ID:"2370182",total_units:917,total_net_hours:3.0,net_productivity:305.44,avg_eff_prod:362.56,utilization_pct:60.1},
+  {ranking:19,OPERATOR_ID:"2515343",total_units:895total_net_hours:3.02,net_productivity:296.71,avg_eff_prod:370.9,utilization_pct:68.5},
+  {ranking:20,OPERATOR_ID:"2351840",total_units:805,total_net_hours:3.0,net_productivity:268.06,avg_eff_prod:322.33,utilization_pct:72.6},
+  {ranking:21,OPERATOR_ID:"2549526",total_units:756,total_net_hours:3.02,net_productivity:250.47,avg_eff_prod:339.45,utilization_pct:68.7},
+  {ranking:22,OPERATOR_ID:"2179363",total_units:741,total_net_hours:2.97,net_productivity:249.52,avg_eff_prod:363.02,utilization_pct:64.7},
+  {ranking:23,OPERATOR_ID:"2515116",total_units:702,total_net_hours:3.0,net_productivity:233.91,avg_eff_prod:360.8,utilization_pct:62.3},
+  {ranking:24,OPERATOR_ID:"1798329",total_units:648,total_net_hours:2.96,net_productivity:218.8,avg_eff_prod:248.87,utilization_pct:86.4},
+  {ranking:25,OPERATOR_ID:"2514986",total_units:382,total_net_hours:1.78,net_productivity:214.54,avg_eff_prod:367.01,utilization_pct:59.5},
+  {ranking:26,OPERATOR_ID:"2273790",total_units:626,total_net_hours:3.01,net_productivity:208.32,avg_eff_prod:413.52,utilization_pct:67.0},
+  {ranking:27,OPERATOR_ID:"2283378",total_units:614,total_net_hours:3.0,net_productivity:204.78,avg_eff_prod:291.43,utilization_pct:67.2},
+  {ranking:28,OPERATOR_ID:"2370052",total_units:614,total_net_hours:3.0,net_productivity:204.63,avg_eff_prod:228.6,utilization_pct:80.4},
+  {ranking:29,OPERATOR_ID:"2492431",total_units:353,total_net_hours:1.73,net_productivity:203.92,avg_eff_prod:354.85,utilization_pct:90.5},
+  {ranking:30,OPERATOR_ID:"2273257",total_units:356,total_net_hours:1.78,net_productivity:200.16,avg_eff_prod:334.93,utilization_pct:80.1},
+  {ranking:31,OPERATOR_ID:"2171675",total_units:351,total_net_hours:1.76,net_productivity:199.62,avg_eff_prod:293.11,utilization_pct:74.2},
+  {ranking:32,OPERATOR_ID:"2156645",total_units:589,total_net_hours:2.96,net_productivity:198.99,avg_eff_prod:219.14,utilization_pct:90.8},
+  {ranking:33,OPERATOR_ID:"2447278",total_units:578,votal_net_hours:2.96,net_productivity:195.01,avg_eff_prod:477.76,utilization_pct:77.6},
+  {ranking:34,OPERATOR_ID:"2370228",total_units:564,total_net_hours:2.96,net_productivity:190.43,avg_eff_prod:211.68,utilization_pct:87.5},
+  {ranking:35,OPERATOR_ID:"2370221",total_units:566,total_net_hours:3.0,net_productivity:188.68,avg_eff_prod:216.55,utilization_pct:86.3},
+  {ranking:36,OPERATOR_ID:"2055686",total_units:338,total_net_hours:1.79,net_productivity:188.59,avg_eff_prod:225.03,utilization_pct:70.0},
+  {ranking:37,OPERATOR_ID:"2283124",total_units:546,total_net_hours:3.0,net_productivity:182.07,avg_eff_prod:229.04,utilization_pct:69.5},
+  {ranking:38,OPERATOR_ID:"2536010",total_units:545,total_net_hours:3.0,net_productivity:181.72,avg_eff_prod:243.73,utilization_pct:70.2},
+  {ranking:39,OPERATOR_ID:"1905365",total_units:529,votal_net_hours:2.98,net_productivity:177.48,avg_eff_prod:210.26,utilization_pct:83.9},
+  {ranking:40,OPERATOR_ID:"2253209",total_units:568,total_net_hours:3.28,net_productivity:173.13,avg_eff_prod:305.56,utilization_pct:74.2},
+  {ranking:41,OPERATOR_ID:"2370102",total_units:509,total_net_hours:2.97,net_productivity:171.65,avg_eff_prod:183.36,utilization_pct:91.2},
+  {ranking:42,OPERATOR_ID:"2156648",total_units:304,total_net_hours:1.78,net_productivity:171.13,avg_eff_prod:293.54,utilization_pct:72.9},
+  {ranking:43,OPERATOR_ID:"2446906",total_units:505,total_net_hours:2.97,net_productivity:169.76,avg_eff_prod:197.26,utilization_pct:85.0},
+  {ranking:44,OPERATOR_ID:"2428337",total_units:498,total_net_hours:2.94,net_productivity:169.55,avg_eff_prod:208.56,utilization_pct:80.9},
+  {ranking:45,OPERATOR_ID:"2377504",total_units:502,total_net_hours:3.0,net_productivity:167.32,avg_eff_prod:192.65,utilization_pct:77.6},
+  {ranking:46,OPERATOR_ID:"2282689",total_units:501,total_net_hours:3.0,net_productivity:167.05,avg_eff_prod:249.73,utilization_pct:66.0},
+  {ranking:47,OPERATOR_ID:"2549590",total_units:299, total_net_hours:1.79,net_productivity:166.68,avg_eff_prod:206.96,utilization_pct:82.5},
+  {ranking:48,OPERATOR_ID:"2283304",total_units:292,total_net_hours:1.76,net_productivity:165.99,avg_eff_prod:209.75,utilization_pct:74.3},
+  {ranking:49,OPERATOR_ID:"2515074",total_units:475,total_net_hours:2.93,net_productivity:161.95,avg_eff_prod:211.67,utilization_pct:62.0},
+  {ranking:50,OPERATOR_ID:"2566646",total_units:461,total_net_hours:2.89,net_productivity:159.7,avg_eff_prod:208.1,utilization_pct:62.4},
+  {ranking:51,OPERATOR_ID:"2515314",total_units:279,total_net_hours:1.76,net_productivity:158.25,avg_eff_prod:224.11,utilization_pct:71.0},
+  {ranking:52,OPERATOR_ID:"2283118",total_units:278,total_net_hours:1.79,net_productivity:155.04,avg_eff_prod:224.88,utilization_pct:71.8},
+  {ranking:53,OPERATOR_ID:"2282744",total_units:434,total_net_hours:2.8,net_productivity:154.79,avg_eff_prod:178.05,utilization_pct:78.2},
+  {ranking:54,OPERATOR_ID:"2252874",total_units:275,total_net_hours:1.8,net_productivity:153.04,avg_eff_prod:177.63,utilization_pct:75.2},
+  {ranking:55,OPERATOR_ID:"2048565",total_units:434,total_net_hours:2.85,net_productivity:152.28,avg_eff_prod:205.7,utilization_pct:64.7},
+  {ranking:56,OPERATOR_ID:"2020864",total_units:435,total_net_hours:2.93,net_productivity:148.41,avg_eff_prod:196.36,utilization_pct:68.4},
+  {ranking:57,OPERATOR_ID:"2273209",total_units:440,total_net_hours:3.0,net_productivity:146.49,avg_eff_prod:165.6,utilization_pct:70.8},
+  {ranking:58,OPERATOR_ID:"2536036",total_units:426,total_net_hours:2.93,net_productivity:145.57,avg_eff_prod:197.59,utilization_pct:63.3},
+  {ranking:59,OPERATOR_ID:"2209645",total_units:419,total_net_hours:2.89,net_productivity:145.21,avg_eff_prod:186.8,utilization_pct:72.3},
+  {ranking:60,OPERATOR_ID:"2210891",total_units:404,total_net_hours:2.94,net_productivity:137.58,avg_eff_prod:166.77,utilization_pct:74.6},
+  {ranking:61,OPERATOR_ID:"2515211",total_units:242,total_net_hours:1.76,net_productivity:137.18,avg_eff_prod:302.91,utilization_pct:76.4},
+  {ranking:62,OPERATOR_ID:"2273785",total_units:399,total_net_hours:2.93,net_productivity:136.1,avg_eff_prod:148.53,utilization_pct:74.7},
+  {ranking:63,OPERATOR_ID:"2282443",total_units:240,total_net_hours:1.78,net_productivity:134.94,avg_eff_prod:202.25,utilization_pct:72.4},
+  {ranking:64,OPERATOR_ID:"1896681",total_units:241,total_net_hours:1.79,net_productivity:134.43,avg_eff_prod:249.4,utilization_pct:53.0},
+  {ranking:65,OPERATOR_ID:"2370224",total_units:362,total_net_hours:2.8,net_productivity:129.22,avg_eff_prod:160.28,utilization_pct:68.9},
+  {ranking:66,OPERATOR_ID:"2428273",total_units:434,total_net_hours:3.38,net_productivity:128.31,avg_eff_prod:155.22,utilization_pct:75.9},
+  {ranking:67,OPERATOR_ID:"2370213",total_units:385,total_net_hours:3.07,net_productivity:125.21,avg_eff_prod:159.03,utilization_pct:70.2},
+  {ranking:68,OPERATOR_ID:"2515173",total_units:413,total_net_hours:3.3,net_productivity:125.16,avg_eff_prod:166.82,utilization_pct:74.3},
+  {ranking:69,OPERATOR_ID:"2087646",total_units:223,total_net_hours:1.79,net_productivity:124.56,avg_eff_prod:145.94,utilization_pct:73.6},
+  {ranking:70,OPERATOR_ID:"2515357",total_units:218,total_net_hours:1.76,net_productivity:123.79,avg_eff_prod:184.91,utilization_pct:49.9},
+  {ranking:71,OPERATOR_ID:"2514793",total_units:342,total_net_hours:2.85,net_productivity:119.99,avg_eff_prod:146.48,utilization_pct:67.0},
+  {ranking:72,OPERATOR_ID:"2171679",total_units:208,total_net_hours:1.76,net_productivity:118.26,avg_eff_prod:160.11,utilization_pct:74.0},
+  {ranking:73,OPERATOR_ID:"2515371",total_units:206,total_net_hours:1.76,net_productivity:116.84,avg_eff_prod:183.79,utilization_pct:65.4},
+  {ranking:74,OPERATOR_ID:"2351924",total_units:364,total_net_hours:3.14,net_productivity:116.03,avg_eff_prod:150.36,utilization_pct:68.2},
+  {ranking:75,OPERATOR_ID:"2536065",total_units:325,total_net_hours:2.81,net_productivity:115.75,avg_eff_prod:209.21,utilization_pct:50.3},
+  {ranking:76,OPERATOR_ID:"2273788",total_units:346,total_net_hours:3.01,net_productivity:114.79,avg_eff_prod:181.46,utilization_pct:57.6},
+  {ranking:77,OPERATOR_ID:"2163838",total_units:133,total_net_hours:1.19,net_productivity:111.97,avg_eff_prod:109.31,utilization_pct:100.0},
+  {ranking:78,OPERATOR_ID:"2515307",total_units:188,total_net_hours:1.76,net_productivity:106.78,avg_eff_prod:304.84,utilization_pct:54.8},
+  {ranking:79,OPERATOR_ID:"1832387",total_units:188,total_net_hours:1.8,net_productivity:104.57,avg_eff_prod:134.11,utilization_pct:59.1},
+  {ranking:80,OPERATOR_ID:"2515107",total_units:184,total_net_hours:1.77,net_productivity:104.18,avg_eff_prod:145.82,utilization_pct:64.0},
+  {ranking:81,OPERATOR_ID:"2535945",total_units:303,total_net_hours:2.93,net_productivity:103.57,avg_eff_prod:178.52,utilization_pct:49.5},
+  {ranking:82,OPERATOR_ID:"2162999",total_units:313,total_net_hours:3.04,net_productivity:103.06,avg_eff_prod:363.86,utilization_pct:84.7},
+  {ranking:83,OPERATOR_ID:"2094074",total_units:185,total_net_hours:1.8,net_productivity:103.03,avg_eff_prod:160.17,utilization_pct:69.2},
+  {ranking:84,OPERATOR_ID:"2415169",total_units:135,total_net_hours:1.31,net_productivity:102.84,avg_eff_prod:125.3,utilization_pct:100.0},
+  {ranking:85,OPERATOR_ID:"2179352",total_units:177,total_net_hours:1.76,net_productivity:100.77,avg_eff_prod:144.06,utilization_pct:65.0},
+  {ranking:86,OPERATOR_ID:"2446709",total_units:297,total_net_hours:3.03,net_productivity:97.93,avg_eff_prod:174.4,utilization_pct:73.5},
+  {ranking:87,OPERATOR_ID:"2226771",total_units:174,total_net_hours:1.79,net_productivity:96.95,avg_eff_prod:146.62,utilization_pct:60.6},
+  {ranking:88,OPERATOR_ID:"2171677",total_units:282,total_net_hours:3.02,net_productivity:93.33,avg_eff_prod:211.61,utilization_pct:53.3},
+  {ranking:89,OPERATOR_ID:"2515145",total_units:306,total_net_hours:3.3,net_productivity:92.67,avg_eff_prod:122.05,utilization_pct:67.9},
+  {ranking:90,OPERATOR_ID:"2273468",total_units:159,total_net_hours:1.73,net_productivity:91.89,avg_eff_prod:124.55,utilization_pct:60.7},
+  {ranking:91,OPERATOR_ID:"2370234",total_units:277,total_net_hours:3.02,net_productivity:91.6,avg_eff_prod:170.37,utilization_pct:65.7},
+  {ranking:92,OPERATOR_ID:"2273764",total_units:277,total_net_hours:3.03,net_productivity:91.47,avg_eff_prod:113.15,utilization_pct:72.4},
+  {ranking:93,OPERATOR_ID:"2446854",total_units:264,total_net_hours:2.92,net_productivity:90.26,avg_eff_prod:143.85,utilization_pct:53.6},
+  {ranking:94,OPERATOR_ID:"2253018",total_units:161,total_net_hours:1.8,net_productivity:89.62,avg_eff_prod:162.7,utilization_pct:65.8},
+  {ranking:95,OPERATOR_ID:"2427727",total_units:151,total_net_hours:1.73,net_productivity:87.48,avg_eff_prod:119.73,utilization_pct:54.3},
+  {ranking:96,OPERATOR_ID:"2272568",total_units:149,total_net_hours:1.73,net_productivity:86.1,avg_eff_prod:122.5,utilization_pct:60.0},
+  {ranking:97,OPERATOR_ID:"2447012",total_units:277,total_net_hours:3.27,net_productivity:84.8,avg_eff_prod:119.61,utilization_pct:69.4},
+  {ranking:98,OPERATOR_ID:"2171674",total_units:241,total_net_hours:2.85,net_productivity:84.56,avg_eff_prod:129.2,utilization_pct:60.0},
+  {ranking:99,OPERATOR_ID:"2427723",total_units:252,total_net_hours:3.04,net_productivity:82.87,avg_eff_prod:217.06,utilization_pct:69.3},
+  {ranking:100,OPERATOR_ID:"1878772",total_units:141,total_net_hours:1.76,net_productivity:80.2,avg_eff_prod:187.98,utilization_pct:57.8}
+];
+
+const medals = {1:'ð¥',2:'ð¥',3:'ð¥'};
+const maxProd = data[0].net_productivity;
+
+// KPIs
+const totalUnits = data.reduce((s,r) => s+r.total_units, 0);
+const avgProd = data.reduce((s,r) => s+r.net_productivity, 0) / data.length;
+const avgUtil = data.reduce((s,r) => s+r.utilization_pct, 0) / data.length;
+
+document.getElementById('avg-prod').textContent = avgProd.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+document.getElementById('total-units').textContent = (totalUnits/1000).toFixed(1) + 'K';
+document.getElementById('avg-util').textContent = avgUtil.toFixed(1) + '%';
+
+// Table
+const tbody = document.getElementById('table-body');
+data.forEach(r => {
+  const pct = (r.net_productivity / maxProd * 100).toFixed(1);
+  const medal = medals[r.ranking] || '';
+  const isTop3 = r.ranking <= 3;
+  const tr = document.createElement('tr');
+  if (isTop3) tr.className = 'top-3';
+  tr.innerHTML = `
+    <td class="rank">${medal || r.ranking}</td>
+    <td class="op-id">${r.OPERATOR_ID}</td>
+    <td class="num highlight">${r.total_units.toLocaleString('pt-BR')}</td>
+    <td class="num highlight">${r.net_productivity.toLocaleString('pt-BR', {minimumFractionDigits:2,maximumFractionDigits:2})}</td>
+    <td class="num">${r.avg_eff_prod.toLocaleString('pt-BR', {minimumFractionDigits:2,maximumFractionDigits:0})}</td>
+    <td class="num">${r.total_net_hours.toFixed(2)}</td>
+    <td class="num green">${r.utilization_pct.toFixed(1)}%</td>
+    <td class="bar-cell">
+      <div class="bar-wrap"><div class="bar" style="width:${pct}%"></div></div>
+    </td>`;
+  tbody.appendChild(tr);
+});
+</script>
+</body>
+</html>
