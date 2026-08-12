@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Produtividade RK PE01 - 12/08</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23181c34'/><path d='M26 42h12l-6 16z' fill='%23ff7a1a'/><path d='M32 6c8 8 10 20 10 32v6H22v-6C22 26 24 14 32 6z' fill='%23ffc400'/><circle cx='32' cy='26' r='5' fill='%233483fa'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23181c34'/><path d='M32 6c8 8 10 20 10 32v6H22v-6C22 26 24 14 32 6z' fill='%23ffc400'/><circle cx='32' cy='26' r='5' fill='%233483fa'/></svg>">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#f4f6f9;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1c202c;padding:18px}
@@ -18,12 +18,10 @@ thead th{background:#e8ecf2;color:#5a6270;font-size:11px;font-weight:700;text-al
 th.r,td.r{text-align:right}th.c,td.c{text-align:center}
 tbody tr{border-bottom:1px solid #eceff3}tbody tr:nth-child(even){background:#f7f9fb}
 td{padding:8px 10px;font-size:14px;vertical-align:middle}
-td.pos{font-weight:700;width:40px;border-left:5px solid #e4e6ea;text-align:center}
-/* zonas */
+td.pos{width:40px;border-left:5px solid #e4e6ea;text-align:center}
 tr.z1 td.pos{border-left-color:#ffc400}
 tr.z2 td.pos{border-left-color:#3483fa}
 tr.z3 td.pos{border-left-color:#d0d4db}
-/* medalhas circulares */
 .medal-circle{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:11px;font-weight:800}
 .medal-circle.g{background:#f0b429;color:#3a2800}
 .medal-circle.s{background:#c0c0c0;color:#2a2a2a}
@@ -32,8 +30,6 @@ tr.z3 td.pos{border-left-color:#d0d4db}
 .rank-num.top10{color:#3483fa}.rank-num.rest{color:#aaa}
 td.un{font-weight:700}td.unh{color:#468060}
 .mv{font-size:13px}.mv.up{color:#15a14a}.mv.dn{color:#e23a3a}.mv.eq{color:#969ca6}.mv.nw{color:#3483fa}
-.d1b{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;font-size:9px;font-weight:700;vertical-align:middle;margin-left:4px}
-.d1b.g{background:#f0c846;color:#3c2d0a}.d1b.s{background:#cdd2da;color:#222}.d1b.b{background:#c89260;color:#fff}
 .foot{margin-top:16px;background:#181c34;border-radius:12px;padding:16px 18px;color:#fff}
 .foot .star{color:#ffc400;font-size:11px;font-weight:700}
 .foot .big{font-weight:700;font-size:15px;margin-top:6px}
@@ -49,10 +45,10 @@ td.un{font-weight:700}td.unh{color:#468060}
 <table><thead><tr><th class="c">#</th><th></th><th>COLABORADOR</th><th class="r">UN</th><th class="r">un/h</th></tr></thead><tbody>
 <tr class="z1"><td class="pos"><span class="medal-circle g">1</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Joabe Pereira</td><td class="r un">212</td><td class="r unh">101,9</td></tr>
 <tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv up">&#9650;</span></td><td>Anthony Dutra</td><td class="r un">209</td><td class="r unh">114,4</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle b">3</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Italo Rodrigo <span class="d1b g">1</span></td><td class="r un">207</td><td class="r unh">137,3</td></tr>
+<tr class="z1"><td class="pos"><span class="medal-circle b">3</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Italo Rodrigo</td><td class="r un">207</td><td class="r unh">137,3</td></tr>
 <tr class="z2"><td class="pos"><span class="rank-num top10">4</span></td><td class="c"><span class="mv up">&#9650;</span></td><td>Pedro Augusto</td><td class="r un">202</td><td class="r unh">101,0</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">5</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Cleiton Otavio <span class="d1b b">3</span></td><td class="r un">189</td><td class="r unh">93,3</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">6</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Ivan Erison <span class="d1b s">2</span></td><td class="r un">180</td><td class="r unh">106,5</td></tr>
+<tr class="z2"><td class="pos"><span class="rank-num top10">5</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Cleiton Otavio</td><td class="r un">189</td><td class="r unh">93,3</td></tr>
+<tr class="z2"><td class="pos"><span class="rank-num top10">6</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Ivan Erison</td><td class="r un">180</td><td class="r unh">106,5</td></tr>
 <tr class="z2"><td class="pos"><span class="rank-num top10">7</span></td><td class="c"><span class="mv up">&#9650;</span></td><td>Walter Ferreira</td><td class="r un">180</td><td class="r unh">86,5</td></tr>
 <tr class="z2"><td class="pos"><span class="rank-num top10">8</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Rafaela Lira</td><td class="r un">161</td><td class="r unh">91,8</td></tr>
 <tr class="z2"><td class="pos"><span class="rank-num top10">9</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Paulo Henrique</td><td class="r un">160</td><td class="r unh">104,0</td></tr>
@@ -64,7 +60,7 @@ td.un{font-weight:700}td.unh{color:#468060}
 <div class="proc"><div class="phead"><span class="pname">HU_ASSEMBLY</span><span class="pcount">7 operadores</span></div>
 <table><thead><tr><th class="c">#</th><th></th><th>COLABORADOR</th><th class="r">UN</th><th class="r">un/h</th></tr></thead><tbody>
 <tr class="z1"><td class="pos"><span class="medal-circle g">1</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Jose Carlos</td><td class="r un">337</td><td class="r unh">208,0</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Romario Ferreira <span class="d1b g">1</span></td><td class="r un">314</td><td class="r unh">205,3</td></tr>
+<tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Romario Ferreira</td><td class="r un">314</td><td class="r unh">205,3</td></tr>
 <tr class="z1"><td class="pos"><span class="medal-circle b">3</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Renan Willamis</td><td class="r un">255</td><td class="r unh">160,8</td></tr>
 <tr class="z2"><td class="pos"><span class="rank-num top10">4</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Vitoria Petrola</td><td class="r un">133</td><td class="r unh">114,3</td></tr>
 <tr class="z2"><td class="pos"><span class="rank-num top10">5</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Elaine Maria</td><td class="r un">105</td><td class="r unh">183,3</td></tr>
@@ -74,7 +70,7 @@ td.un{font-weight:700}td.unh{color:#468060}
 <div class="proc"><div class="phead"><span class="pname">PACKING</span><span class="pcount">2 operadores</span></div>
 <table><thead><tr><th class="c">#</th><th></th><th>COLABORADOR</th><th class="r">UN</th><th class="r">un/h</th></tr></thead><tbody>
 <tr class="z1"><td class="pos"><span class="medal-circle g">1</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Cleide Rafaela</td><td class="r un">167</td><td class="r unh">121,8</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Tatiane Maria <span class="d1b g">1</span></td><td class="r un">139</td><td class="r unh">114,9</td></tr>
+<tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Tatiane Maria</td><td class="r un">139</td><td class="r unh">114,9</td></tr>
 </tbody></table></div>
 <div class="foot">
 <span class="legend"><span style="color:#15a14a">&#9650; subiu</span><span style="color:#e23a3a">&#9660; caiu</span><span style="color:#969ca6">&#8211; manteve</span><span style="color:#3483fa">&#9679; novo</span></span>
