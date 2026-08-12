@@ -1,84 +1,318 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Produtividade RK PE01 - 12/08</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23181c34'/><path d='M32 6c8 8 10 20 10 32v6H22v-6C22 26 24 14 32 6z' fill='%23ffc400'/><circle cx='32' cy='26' r='5' fill='%233483fa'/></svg>">
+<html><head><meta charset="UTF-8">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#f4f6f9;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1c202c;padding:18px}
-.wrap{max-width:760px;margin:0 auto}
-.hdr{background:#181c34;border-radius:14px;padding:16px 20px;position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center}
-.hdr:before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:#ffc400}
-.hdr h1{color:#fff;font-size:25px;font-weight:800}.hdr .sub{color:#b4bacd;font-size:12px;margin-top:6px}
-.badge{background:#ffc400;color:#28230a;font-weight:700;font-size:12px;padding:6px 12px;border-radius:7px}
-.proc{margin-top:16px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(20,24,40,.06)}
-.phead{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;background:#eef1f6}
-.pname{font-size:20px;font-weight:800;color:#1e2230}.pcount{font-size:12px;color:#788}
-table{width:100%;border-collapse:collapse}
-thead th{background:#e8ecf2;color:#5a6270;font-size:11px;font-weight:700;text-align:left;padding:7px 10px}
-th.r,td.r{text-align:right}th.c,td.c{text-align:center}
-tbody tr{border-bottom:1px solid #eceff3}tbody tr:nth-child(even){background:#f7f9fb}
-td{padding:8px 10px;font-size:14px;vertical-align:middle}
-td.pos{width:40px;border-left:5px solid #e4e6ea;text-align:center}
-tr.z1 td.pos{border-left-color:#ffc400}
-tr.z2 td.pos{border-left-color:#3483fa}
-tr.z3 td.pos{border-left-color:#d0d4db}
-.medal-circle{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:11px;font-weight:800}
-.medal-circle.g{background:#f0b429;color:#3a2800}
-.medal-circle.s{background:#c0c0c0;color:#2a2a2a}
-.medal-circle.b{background:#cd7f32;color:#fff}
-.rank-num{font-weight:700;font-size:13px}
-.rank-num.top10{color:#3483fa}.rank-num.rest{color:#aaa}
-td.un{font-weight:700}td.unh{color:#468060}
-.mv{font-size:13px}.mv.up{color:#15a14a}.mv.dn{color:#e23a3a}.mv.eq{color:#969ca6}.mv.nw{color:#3483fa}
-.foot{margin-top:16px;background:#181c34;border-radius:12px;padding:16px 18px;color:#fff}
-.foot .star{color:#ffc400;font-size:11px;font-weight:700}
-.foot .big{font-weight:700;font-size:15px;margin-top:6px}
-.foot .lbl{color:#ffc400;font-size:11px;font-weight:700;margin-top:14px}
-.foot .setor{color:#e1e4f0;font-size:13px;margin-top:5px}
-.foot .frase{color:#96aad2;font-style:italic;font-size:13px;margin-top:14px}
-.foot .sign{text-align:right;color:#c8cddc;font-weight:700;font-size:12px;margin-top:8px}
-.legend{float:right;font-size:12px;color:#c8cdda}.legend span{margin-left:12px}
-</style></head>
-<body><div class="wrap">
-<div class="hdr"><div><h1>PRODUTIVIDADE RK PE01</h1><div class="sub">12/08 &middot; Turno noite 23:20&ndash;06:40 &middot; Guilherme Miller / Jorrani Salles</div></div><div class="badge">12/08/2026</div></div>
-<div class="proc"><div class="phead"><span class="pname">PICKING</span><span class="pcount">13 operadores</span></div>
-<table><thead><tr><th class="c">#</th><th></th><th>COLABORADOR</th><th class="r">UN</th><th class="r">un/h</th></tr></thead><tbody>
-<tr class="z1"><td class="pos"><span class="medal-circle g">1</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Joabe Pereira</td><td class="r un">212</td><td class="r unh">101,9</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv up">&#9650;</span></td><td>Anthony Dutra</td><td class="r un">209</td><td class="r unh">114,4</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle b">3</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Italo Rodrigo</td><td class="r un">207</td><td class="r unh">137,3</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">4</span></td><td class="c"><span class="mv up">&#9650;</span></td><td>Pedro Augusto</td><td class="r un">202</td><td class="r unh">101,0</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">5</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Cleiton Otavio</td><td class="r un">189</td><td class="r unh">93,3</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">6</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Ivan Erison</td><td class="r un">180</td><td class="r unh">106,5</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">7</span></td><td class="c"><span class="mv up">&#9650;</span></td><td>Walter Ferreira</td><td class="r un">180</td><td class="r unh">86,5</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">8</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Rafaela Lira</td><td class="r un">161</td><td class="r unh">91,8</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">9</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Paulo Henrique</td><td class="r un">160</td><td class="r unh">104,0</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">10</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Deyvson Henrique</td><td class="r un">155</td><td class="r unh">90,4</td></tr>
-<tr class="z3"><td class="pos"><span class="rank-num rest">11</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Ariel Galdino</td><td class="r un">145</td><td class="r unh">84,0</td></tr>
-<tr class="z3"><td class="pos"><span class="rank-num rest">12</span></td><td class="c"><span class="mv eq">&#8211;</span></td><td>Renata Mariely</td><td class="r un">114</td><td class="r unh">77,9</td></tr>
-<tr class="z3"><td class="pos"><span class="rank-num rest">13</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Thayna Gabriele</td><td class="r un">102</td><td class="r unh">68,4</td></tr>
-</tbody></table></div>
-<div class="proc"><div class="phead"><span class="pname">HU_ASSEMBLY</span><span class="pcount">7 operadores</span></div>
-<table><thead><tr><th class="c">#</th><th></th><th>COLABORADOR</th><th class="r">UN</th><th class="r">un/h</th></tr></thead><tbody>
-<tr class="z1"><td class="pos"><span class="medal-circle g">1</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Jose Carlos</td><td class="r un">337</td><td class="r unh">208,0</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Romario Ferreira</td><td class="r un">314</td><td class="r unh">205,3</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle b">3</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Renan Willamis</td><td class="r un">255</td><td class="r unh">160,8</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">4</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Vitoria Petrola</td><td class="r un">133</td><td class="r unh">114,3</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">5</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Elaine Maria</td><td class="r un">105</td><td class="r unh">183,3</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">6</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Tailson Xavier</td><td class="r un">89</td><td class="r unh">170,2</td></tr>
-<tr class="z2"><td class="pos"><span class="rank-num top10">7</span></td><td class="c"><span class="mv eq">&#8211;</span></td><td>Adaias Souza</td><td class="r un">14</td><td class="r unh">126,6</td></tr>
-</tbody></table></div>
-<div class="proc"><div class="phead"><span class="pname">PACKING</span><span class="pcount">2 operadores</span></div>
-<table><thead><tr><th class="c">#</th><th></th><th>COLABORADOR</th><th class="r">UN</th><th class="r">un/h</th></tr></thead><tbody>
-<tr class="z1"><td class="pos"><span class="medal-circle g">1</span></td><td class="c"><span class="mv nw">&#9679;</span></td><td>Cleide Rafaela</td><td class="r un">167</td><td class="r unh">121,8</td></tr>
-<tr class="z1"><td class="pos"><span class="medal-circle s">2</span></td><td class="c"><span class="mv dn">&#9660;</span></td><td>Tatiane Maria</td><td class="r un">139</td><td class="r unh">114,9</td></tr>
-</tbody></table></div>
-<div class="foot">
-<span class="legend"><span style="color:#15a14a">&#9650; subiu</span><span style="color:#e23a3a">&#9660; caiu</span><span style="color:#969ca6">&#8211; manteve</span><span style="color:#3483fa">&#9679; novo</span></span>
-<div class="star">&#9733; DESTAQUE DA NOITE</div>
-<div class="big">Jose Carlos &mdash; 208,0 un/h &middot; hu_assembly</div>
-<div class="lbl">DESTAQUE POR SETOR (maior un/h)</div>
-<div class="setor"><b>picking</b>: Italo Rodrigo 137,3 &nbsp;&middot;&nbsp; <b>hu_assembly</b>: Jose Carlos 208,0 &nbsp;&middot;&nbsp; <b>packing</b>: Cleide Rafaela 121,8</div>
-<div class="frase">&ldquo;Na madrugada mais silenciosa, o ru&iacute;do das engrenagens da nossa equipe &eacute; a sinfonia mais bonita que existe.&rdquo;</div>
-<div class="sign">&mdash; Guilherme Miller / Jorrani Salles &middot; vs noite 11/08</div>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Arial,sans-serif; background:#fff; width:790px; }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<div style="background:#0f1923;padding:16px 20px 12px;display:flex;justify-content:space-between;align-items:flex-start">
+  <div>
+    <div style="font-size:27px;font-weight:900;color:#fff;letter-spacing:.5px">PRODUTIVIDADE RK PE01</div>
+    <div style="font-size:11.5px;color:#7a8fa0;margin-top:5px">
+      12/08 &nbsp;·&nbsp; Turno noite 23:00–06:00 &nbsp;·&nbsp; Guilherme Miller / Jorrani Salles
+    </div>
+  </div>
+  <div style="background:#f0b429;color:#1a1a1a;font-weight:800;font-size:14px;padding:7px 15px;border-radius:8px;white-space:nowrap;margin-top:4px">
+    12/08/2026
+  </div>
 </div>
-</div></body></html>
+
+<!-- ══ BANNER ══ -->
+<div style="background:#132d1e;border-left:4px solid #f0b429;padding:11px 18px">
+  <div style="display:flex;align-items:center;gap:7px">
+    <span style="color:#f0b429;font-size:14px">★</span>
+    <span style="color:#f0b429;font-weight:800;font-size:12.5px;letter-spacing:.3px">
+      MADRUGADA DE GUERREIROS — A CIDADE DORME, VOCÊS ENTREGAM!
+    </span>
+  </div>
+  <div style="color:#5a9a6a;font-size:11px;margin-top:4px;margin-left:21px">
+    Cada unidade processada nessa madrugada é puro comprometimento. Bora manter o ritmo!
+  </div>
+</div>
+
+<!-- ══ PICKING ══ -->
+<div style="background:#fff;margin-top:2px">
+  <div style="padding:10px 18px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #eee">
+    <span style="font-size:18px;font-weight:700;color:#1a1a1a">picking</span>
+    <span style="font-size:11px;color:#bbb">13 operadores</span>
+  </div>
+  <div style="display:flex;padding:5px 16px;background:#f5f7fa;border-bottom:1px solid #e8eaed">
+    <div style="width:26px;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">#</div>
+    <div style="width:20px"></div>
+    <div style="flex:1;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">Colaborador</div>
+    <div style="width:65px;text-align:right;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">UN</div>
+    <div style="width:80px;text-align:right;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">un/h</div>
+  </div>
+  
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fff">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#f0b429;color:#3a2800;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">1</div></div>
+          <div style="width:20px;font-size:13px;color:#16a34a;flex-shrink:0;text-align:center">▲</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Pedro Augusto</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">445</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">100.1</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fafbfc">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#c0c0c0;color:#2a2a2a;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">2</div></div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Joabe Pereira</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">436</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">98.6</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fff">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#cd7f32;color:#ffffff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">3</div></div>
+          <div style="width:20px;font-size:13px;color:#16a34a;flex-shrink:0;text-align:center">▲</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Anthony Dutra</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">435</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">110.8</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">4</div>
+          <div style="width:20px;font-size:13px;color:#9ca3af;flex-shrink:0;text-align:center">–</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Italo Rodrigo</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">420</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">127.6</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">5</div>
+          <div style="width:20px;font-size:13px;color:#dc2626;flex-shrink:0;text-align:center">▼</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Cleiton Otavio</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">410</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">97.8</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">6</div>
+          <div style="width:20px;font-size:13px;color:#16a34a;flex-shrink:0;text-align:center">▲</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Walter Ferreira</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">403</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">83.2</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">7</div>
+          <div style="width:20px;font-size:13px;color:#dc2626;flex-shrink:0;text-align:center">▼</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Ivan Erison</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">394</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">101.5</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">8</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Rafaela Maria</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">387</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">106.9</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">9</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Paulo Henrique</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">357</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">109.0</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">10</div>
+          <div style="width:20px;font-size:13px;color:#9ca3af;flex-shrink:0;text-align:center">–</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Ariel Galdino</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">354</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">87.2</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #d0d4db;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#aaaaaa;flex-shrink:0">11</div>
+          <div style="width:20px;font-size:13px;color:#dc2626;flex-shrink:0;text-align:center">▼</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Deyvson Henrique</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">333</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">94.5</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #d0d4db;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#aaaaaa;flex-shrink:0">12</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Thayna Gabriele</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">285</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">84.8</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #d0d4db;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#aaaaaa;flex-shrink:0">13</div>
+          <div style="width:20px;font-size:13px;color:#16a34a;flex-shrink:0;text-align:center">▲</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Renata Mariely</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">211</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">67.0</div>
+        </div>
+</div>
+
+<!-- ══ HU ASSEMBLY ══ -->
+<div style="background:#fff;margin-top:2px">
+  <div style="padding:10px 18px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #eee">
+    <span style="font-size:18px;font-weight:700;color:#1a1a1a">hu_assembly</span>
+    <span style="font-size:11px;color:#bbb">10 operadores</span>
+  </div>
+  <div style="display:flex;padding:5px 16px;background:#f5f7fa;border-bottom:1px solid #e8eaed">
+    <div style="width:26px;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">#</div>
+    <div style="width:20px"></div>
+    <div style="flex:1;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">Colaborador</div>
+    <div style="width:65px;text-align:right;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">UN</div>
+    <div style="width:80px;text-align:right;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">un/h</div>
+  </div>
+  
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fff">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#f0b429;color:#3a2800;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">1</div></div>
+          <div style="width:20px;font-size:13px;color:#9ca3af;flex-shrink:0;text-align:center">–</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Romario Ferreira</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">777</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">198.5</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fafbfc">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#c0c0c0;color:#2a2a2a;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">2</div></div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Jose Carlos</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">696</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">200.0</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fff">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#cd7f32;color:#ffffff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">3</div></div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Renan Willamis</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">512</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">157.6</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">4</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Vitoria Petrola</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">459</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">133.1</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">5</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Elaine Maria</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">245</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">198.5</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">6</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Tatiane Maria</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">151</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">151.5</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">7</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Tailson Xavier</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">89</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">170.2</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">8</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Cleide Rafaela</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">66</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">183.2</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fff">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">9</div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Renata Mariely</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">41</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">159.7</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #3b82f6;background:#fafbfc">
+          <div style="width:26px;font-size:14px;font-weight:800;color:#3b82f6;flex-shrink:0">10</div>
+          <div style="width:20px;font-size:13px;color:#dc2626;flex-shrink:0;text-align:center">▼</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Adaias Souza</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">19</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">114.0</div>
+        </div>
+</div>
+
+<!-- ══ PACKING ══ -->
+<div style="background:#fff;margin-top:2px">
+  <div style="padding:10px 18px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #eee">
+    <span style="font-size:18px;font-weight:700;color:#1a1a1a">packing</span>
+    <span style="font-size:11px;color:#bbb">2 operadores</span>
+  </div>
+  <div style="display:flex;padding:5px 16px;background:#f5f7fa;border-bottom:1px solid #e8eaed">
+    <div style="width:26px;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">#</div>
+    <div style="width:20px"></div>
+    <div style="flex:1;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">Colaborador</div>
+    <div style="width:65px;text-align:right;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">UN</div>
+    <div style="width:80px;text-align:right;font-size:9.5px;color:#aaa;text-transform:uppercase;font-weight:600">un/h</div>
+  </div>
+  
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fff">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#f0b429;color:#3a2800;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">1</div></div>
+          <div style="width:20px;font-size:13px;color:#3b82f6;flex-shrink:0;text-align:center">●</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Cleide Rafaela</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">333</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">122.4</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid #eff0f2;
+                    border-left:4px solid #f0b429;background:#fafbfc">
+          <div style="width:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#c0c0c0;color:#2a2a2a;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">2</div></div>
+          <div style="width:20px;font-size:13px;color:#dc2626;flex-shrink:0;text-align:center">▼</div>
+          <div style="flex:1;font-size:13px;font-weight:500;color:#1a1a1a">Tatiane Maria</div>
+          <div style="width:65px;text-align:right;font-size:14px;font-weight:700;color:#1a1a1a">223</div>
+          <div style="width:80px;text-align:right;font-size:14px;font-weight:600;color:#16a34a">116.3</div>
+        </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div style="background:#0f1923;padding:14px 18px 12px;margin-top:2px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+    <div style="color:#f0b429;font-size:10.5px;font-weight:800;letter-spacing:1px">★ DESTAQUE DA NOITE</div>
+    <div style="font-size:10px;color:#3a4a5a">
+      <span style="color:#16a34a">▲</span> subiu &nbsp;
+      <span style="color:#dc2626">▼</span> caiu &nbsp;
+      <span style="color:#6a7a8a">–</span> manteve &nbsp;
+      <span style="color:#3b82f6">●</span> novo
+    </div>
+  </div>
+  <div style="font-size:21px;font-weight:900;color:#fff;margin-bottom:8px">
+    Jose Carlos — 200.0 un/h &nbsp;·&nbsp; hu_assembly
+  </div>
+  <div style="font-size:10px;color:#f0b429;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px">
+    Destaque por setor (maior un/h)
+  </div>
+  <div style="font-size:11px;color:#6a7a8a;margin-bottom:10px">
+    <b style="color:#9aabb8">picking:</b> Italo Rodrigo 127.6 &nbsp;&nbsp;
+    <b style="color:#9aabb8">·</b> &nbsp;&nbsp;
+    <b style="color:#9aabb8">hu_assembly:</b> Jose Carlos 200.0 &nbsp;&nbsp;
+    <b style="color:#9aabb8">·</b> &nbsp;&nbsp;
+    <b style="color:#9aabb8">packing:</b> Cleide Rafaela 122.4
+  </div>
+  <div style="border-top:1px solid #1e2d3d;padding-top:8px;margin-top:4px">
+    <div style="font-style:italic;font-size:11px;color:#3a4a5a">
+      "Você não precisa ver toda a escada, só precisa dar o primeiro degrau. E vocês já subiram vários!"
+    </div>
+    <div style="font-size:10px;color:#2a3a4a;margin-top:5px;text-align:right">
+      — Guilherme Miller / Jorrani Salles &nbsp;·&nbsp; vs noite 10/08
+    </div>
+  </div>
+</div>
+
+</body></html>
