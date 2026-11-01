@@ -37,7 +37,7 @@
   .n{color:var(--dash)}
   .med{font-size:15px}
   .nota{font-size:12px;color:var(--muted);margin:4px 0 0}
-  .legenda{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin-top:18px;color:var(--sub)}
+  .legenda{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin-top:10px;margin-bottom:12px;color:var(--sub)}
   .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin-right:6px}
   .chart-wrap{display:grid;grid-template-columns:1fr;gap:14px}
   .chart{background:var(--cbg);border:1px solid var(--border);border-radius:10px;padding:14px}
@@ -112,6 +112,10 @@
 </div>
 
 <h2>Quem bateu a meta, hora a hora</h2>
+<div class="legenda">
+  <span><span class="sw" style="background:#00A650"></span>Bateram (verde)</span>
+  <span><span class="sw" style="background:#4a4a4a"></span>Não bateram (cinza)</span>
+</div>
 <div class="chart-wrap">
   <div class="chart">
     <h3>Packing (meta 105)</h3>
@@ -152,10 +156,6 @@
       <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div><div class="names"></div></div>
     </div>
   </div>
-</div>
-<div class="legenda">
-  <span><span class="sw" style="background:#00A650"></span>Bateram (verde)</span>
-  <span><span class="sw" style="background:#4a4a4a"></span>Não bateram (cinza)</span>
 </div>
 
 <h2>Packing · meta 105 un/h</h2>
