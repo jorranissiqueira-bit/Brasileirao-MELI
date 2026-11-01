@@ -1,274 +1,177 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><title>Produtividade noite 2026-10-31</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Produtividade noite 01/11/2026</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23FFE600%22/%3E%3Cpath%20d%3D%22M32%2012%20L50%2021%20L50%2043%20L32%2052%20L14%2043%20L14%2021%20Z%22%20fill%3D%22%233483FA%22/%3E%3Cpath%20d%3D%22M14%2021%20L32%2030%20L50%2021%22%20fill%3D%22none%22%20stroke%3D%22%23FFE600%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M32%2030%20L32%2052%22%20stroke%3D%22%23FFE600%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M23%2016.5%20L41%2025.5%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.6%22/%3E%3C/svg%3E">
 <style>
-*{box-sizing:border-box}
-body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;margin:0;color:#1f2937;background:#f5f6fa}
-.wrap{max-width:1180px;margin:0 auto;padding:22px}
-.hero{background:linear-gradient(120deg,#FFE600 0%,#FFF27A 60%,#fff 100%);border-radius:14px;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:20px;border:1px solid #f0d900}
-.kicker{font-size:12px;letter-spacing:2px;font-weight:700;color:#3483FA}
-.hero h1{margin:4px 0 2px;font-size:30px;color:#1f2937}
-.janela{font-size:15px;font-weight:600;color:#374151}
-.janela span{background:#3483FA;color:#fff;border-radius:6px;padding:2px 8px;margin:0 4px}
-.frase{background:#fff;border-radius:10px;padding:12px 16px;font-size:14px;max-width:380px;color:#1f2937;box-shadow:0 2px 6px rgba(0,0,0,.08);border-left:5px solid #3483FA}
-.podio{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:20px 0 6px}
-.card{background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 2px 6px rgba(0,0,0,.07);border-top:5px solid #3483FA}
-.card .ptitle{font-size:11px;font-weight:700;letter-spacing:1px;color:#3483FA;text-transform:uppercase}
-.card .pn{font-size:15px;font-weight:700;margin:6px 0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card .pv{font-size:13px;color:#4b5563}
-.card .pv b{color:#3483FA;font-size:18px}
-h2{font-size:17px;margin:26px 0 8px;color:#1f2937;display:flex;align-items:center;gap:10px}
-h2:before{content:"";width:6px;height:20px;background:#FFE600;border-radius:3px;display:inline-block}
-.tbl{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.07)}
-table{border-collapse:collapse;width:100%;table-layout:fixed;font-size:12.5px}
-th,td{padding:6px 4px;text-align:center;border-bottom:1px solid #eef0f4}
-th{background:#3483FA;color:#fff;font-weight:600;font-size:12px}
-td.nome{text-align:left;padding-left:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
-tbody tr:nth-child(even) td{background:#fafbfd}
-.med{display:inline-block;width:22px;height:22px;line-height:22px;border-radius:50%;font-weight:700;font-size:11px;color:#1f2937}
-.m1{background:#FFC700}.m2{background:#C9CED6}.m3{background:#D9915A;color:#fff}
-.g{background:#00A650!important;color:#fff;font-weight:700}
-.y{background:#FFE600!important;color:#1f2937;font-weight:700}
-.r{background:#FF5A4E!important;color:#fff;font-weight:700}
-tr.total td{font-weight:700;background:#1f2937!important;color:#FFE600}
-.legenda{font-size:12px;color:#4b5563;margin:12px 0;background:#fff;padding:10px 14px;border-radius:10px}
-.chart{display:flex;gap:8px;align-items:flex-start;background:#fff;border-radius:12px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,.07)}
-.col{flex:1;text-align:center;font-size:11px}
-.col .lbl{font-weight:700;margin-bottom:4px;color:#1f2937}
-.bar{height:140px;display:flex;flex-direction:column;border-radius:8px;overflow:hidden;background:#eef0f4}
-.bar .red{background:#FF5A4E}.bar .green{background:#00A650}
-.hr{font-weight:700;margin-top:6px;color:#3483FA}
-.names{text-align:left;margin-top:6px;font-size:10.5px;line-height:1.35;min-height:40px;padding:4px;border-radius:6px}
-.names.g2{background:#e6f7ee;color:#0a6b33}.names.r2{background:#fde8e6;color:#a11a10}
-</style></head><body><div class="wrap">
-<div class="hero">
-  <div>
-    <div class="kicker">PRODUTIVIDADE · TURNO DA NOITE</div>
-    <h1>31/10/2026</h1>
-    <div class="janela">Janela: <span>30/10 · 23H</span> até <span>31/10 · 06:59</span></div>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#1a1a1a;color:#eee}
+  header{background:#FFE600;color:#111;padding:22px 28px}
+  header h1{margin:0 0 6px;font-size:24px}
+  header p{margin:0;font-size:14px}
+  main{max-width:1180px;margin:0 auto;padding:22px 16px 40px}
+  h2{font-size:17px;margin:30px 0 10px;color:#FFE600;border-bottom:1px solid #333;padding-bottom:6px}
+  .podio{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .card{background:#262626;border:1px solid #3a3a3a;border-radius:10px;padding:14px}
+  .card .proc{font-size:12px;color:#aaa;text-transform:uppercase;letter-spacing:.04em}
+  .card .lugar{font-size:18px;font-weight:700;color:#FFE600;margin:6px 0}
+  .card .nums{font-size:14px}
+  table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;background:#222;margin-bottom:8px}
+  th,td{border:1px solid #333;padding:6px 4px;text-align:center}
+  th{background:#2f2f2f;color:#ddd;font-size:12px}
+  td.nome,th.nome{text-align:left;padding-left:8px}
+  tr.total td{background:#2c2c2c;font-weight:700}
+  .g{background:#00A650;color:#fff}
+  .y{background:#FFE600;color:#111}
+  .r{background:#D9362B;color:#fff}
+  .n{color:#666}
+  .med{font-size:15px}
+  .nota{font-size:12px;color:#999;margin:4px 0 0}
+  .legenda{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin-top:10px;color:#ccc}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin-right:6px}
+  .chart-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
+  .chart{background:#222;border:1px solid #333;border-radius:10px;padding:14px}
+  .chart h3{margin:0 0 10px;font-size:14px;color:#ddd}
+  .bars{display:flex;align-items:flex-end;gap:6px;height:150px;border-bottom:1px solid #444}
+  .col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%}
+  .bar{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;background:transparent}
+  .bar .ok{background:#00A650}
+  .bar .no{background:#4a4a4a}
+  .lbl{font-size:11px;color:#bbb;margin-top:4px}
+  .frac{font-size:11px;color:#eee;margin-bottom:3px;height:14px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Produtividade noite 01/11/2026</h1>
+  <p>Turno D0 = 01/11/2026 · Janela: 31/10 23H até 01/11 06:59 · Manager: gmiller / jorssiqueira</p>
+</header>
+<main>
+
+<h2>Pódio do turno</h2>
+<div class="podio">
+  <div class="card"><div class="proc">Packing</div><div class="lugar">1º lugar</div><div class="nums">304 un · LÍQ 133.1</div></div>
+  <div class="card"><div class="proc">Hu (Shipping)</div><div class="lugar">1º lugar</div><div class="nums">726 un · LÍQ 209.1</div></div>
+  <div class="card"><div class="proc">Picking SIOC</div><div class="lugar">1º lugar</div><div class="nums">561 un · LÍQ 118.8</div></div>
+  <div class="card"><div class="proc">Picking Single RK</div><div class="lugar">1º lugar</div><div class="nums">261 un · LÍQ 77.1</div></div>
+  <div class="card"><div class="proc">Picking Single Leves</div><div class="lugar">1º lugar</div><div class="nums">2 un · LÍQ 24.7</div></div>
+</div>
+
+<h2>Packing · meta 105 un/h</h2>
+<table>
+  <colgroup><col style="width:5%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:9%"></colgroup>
+  <tr><th>#</th><th class="nome">REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
+  <tr><td class="med">🥇</td><td class="nome">Cleide Santos</td><td class="n">–</td><td class="r">57</td><td class="y">101</td><td class="r">84</td><td class="n">–</td><td class="r">62</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>133.1</td><td>304</td></tr>
+  <tr class="total"><td></td><td class="nome">Total</td><td>–</td><td>57</td><td>101</td><td>84</td><td>–</td><td>62</td><td>–</td><td>–</td><td>–</td><td>133.1</td><td>304</td></tr>
+</table>
+
+<h2>Hu (Shipping) · meta 130 un/h</h2>
+<table>
+  <colgroup><col style="width:5%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:9%"></colgroup>
+  <tr><th>#</th><th class="nome">REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
+  <tr><td class="med">🥇</td><td class="nome">Jose Amaral</td><td>30</td><td class="y">126</td><td class="g">136</td><td class="r">84</td><td class="n">–</td><td class="r">113</td><td class="y">119</td><td class="y">118</td><td class="n">–</td><td>209.1</td><td>726</td></tr>
+  <tr><td class="med">🥈</td><td class="nome">Gleybson Silva</td><td>29</td><td class="r">96</td><td class="g">158</td><td class="y">128</td><td class="n">–</td><td class="r">96</td><td class="y">122</td><td class="r">92</td><td class="n">–</td><td>204.8</td><td>721</td></tr>
+  <tr><td class="med">🥉</td><td class="nome">Kaio Silva</td><td class="n">–</td><td class="r">68</td><td class="r">97</td><td class="r">106</td><td class="n">–</td><td class="r">105</td><td class="r">92</td><td class="r">16</td><td class="n">–</td><td>203.2</td><td>484</td></tr>
+  <tr><td>4</td><td class="nome">Elaine Maria</td><td>45</td><td class="n">–</td><td class="r">50</td><td class="r">51</td><td class="n">–</td><td class="r">84</td><td class="y">128</td><td class="r">99</td><td class="n">–</td><td>227.7</td><td>457</td></tr>
+  <tr><td>5</td><td class="nome">Rodolfo Aureliano</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="g">193</td><td class="n">–</td><td class="n">–</td><td>700.3</td><td>193</td></tr>
+  <tr><td>6</td><td class="nome">Yuri Albuquerque</td><td class="n">–</td><td class="r">18</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="r">30</td><td class="n">–</td><td>163.5</td><td>48</td></tr>
+  <tr><td>7</td><td class="nome">Joabe Junior</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="r">28</td><td class="n">–</td><td>266.7</td><td>28</td></tr>
+  <tr class="total"><td></td><td class="nome">Total</td><td>104</td><td>308</td><td>441</td><td>369</td><td>–</td><td>398</td><td>654</td><td>383</td><td>–</td><td>220.4</td><td>2657</td></tr>
+</table>
+
+<h2>Picking SIOC · meta 75 un/h</h2>
+<table>
+  <colgroup><col style="width:5%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:9%"></colgroup>
+  <tr><th>#</th><th class="nome">REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
+  <tr><td class="med">🥇</td><td class="nome">Emerson Silva</td><td>24</td><td class="g">94</td><td class="g">108</td><td class="r">35</td><td class="r">11</td><td class="g">128</td><td class="g">109</td><td class="r">52</td><td class="n">–</td><td>118.8</td><td>561</td></tr>
+  <tr><td class="med">🥈</td><td class="nome">Paulo Henrique</td><td>10</td><td class="g">96</td><td class="g">102</td><td class="r">48</td><td class="r">6</td><td class="g">81</td><td class="g">115</td><td class="r">51</td><td class="n">–</td><td>106.8</td><td>509</td></tr>
+  <tr><td class="med">🥉</td><td class="nome">Rafaela Silva</td><td>5</td><td class="g">97</td><td class="g">97</td><td class="r">39</td><td class="r">4</td><td class="y">72</td><td class="g">80</td><td class="r">35</td><td class="n">–</td><td>97.6</td><td>429</td></tr>
+  <tr><td>4</td><td class="nome">Joabe Junior</td><td>8</td><td class="g">91</td><td class="g">78</td><td class="r">60</td><td class="n">–</td><td class="r">45</td><td class="y">70</td><td class="r">21</td><td class="n">–</td><td>90.2</td><td>373</td></tr>
+  <tr><td>5</td><td class="nome">Cleiton Oliveira</td><td>10</td><td class="r">67</td><td class="g">92</td><td class="r">33</td><td class="n">–</td><td class="r">48</td><td class="r">53</td><td class="r">27</td><td class="n">–</td><td>91.3</td><td>330</td></tr>
+  <tr><td>6</td><td class="nome">Tailson Santana</td><td>12</td><td class="r">6</td><td class="r">35</td><td class="r">46</td><td class="n">–</td><td class="r">39</td><td class="r">62</td><td class="r">33</td><td class="n">–</td><td>78.4</td><td>233</td></tr>
+  <tr><td>7</td><td class="nome">Bruno Silva</td><td class="n">–</td><td class="r">47</td><td class="r">40</td><td class="r">48</td><td class="n">–</td><td class="r">32</td><td class="r">39</td><td class="r">21</td><td class="n">–</td><td>55.2</td><td>227</td></tr>
+  <tr><td>8</td><td class="nome">Deyvson Silva</td><td>9</td><td class="r">36</td><td class="r">51</td><td class="r">13</td><td class="n">–</td><td class="r">40</td><td class="r">59</td><td class="n">–</td><td class="n">–</td><td>78.0</td><td>208</td></tr>
+  <tr><td>9</td><td class="nome">Wandry Silva</td><td>7</td><td class="r">3</td><td class="n">–</td><td class="r">39</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>82.4</td><td>49</td></tr>
+  <tr class="total"><td></td><td class="nome">Total</td><td>85</td><td>537</td><td>603</td><td>361</td><td>21</td><td>485</td><td>587</td><td>240</td><td>–</td><td>91.3</td><td>2919</td></tr>
+</table>
+
+<h2>Quem bateu a meta, hora a hora</h2>
+<div class="chart-wrap">
+  <div class="chart">
+    <h3>Packing (meta 105)</h3>
+    <div class="bars">
+      <div class="col"><div class="frac">0/0</div><div class="bar"></div><div class="lbl">23H</div></div>
+      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">00H</div></div>
+      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">01H</div></div>
+      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">04H</div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">05H</div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">06H</div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div></div>
+    </div>
+  </div>
+  <div class="chart">
+    <h3>Hu (meta 130)</h3>
+    <div class="bars">
+      <div class="col"><div class="frac">0/3</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">23H</div></div>
+      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">00H</div></div>
+      <div class="col"><div class="frac">2/4</div><div class="bar"><div class="ok" style="height:50%"></div><div class="no" style="height:50%"></div></div><div class="lbl">01H</div></div>
+      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div></div>
+      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">04H</div></div>
+      <div class="col"><div class="frac">1/5</div><div class="bar"><div class="ok" style="height:20%"></div><div class="no" style="height:80%"></div></div><div class="lbl">05H</div></div>
+      <div class="col"><div class="frac">0/6</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">06H</div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div></div>
+    </div>
+  </div>
+  <div class="chart">
+    <h3>Picking SIOC (meta 75)</h3>
+    <div class="bars">
+      <div class="col"><div class="frac">0/8</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">23H</div></div>
+      <div class="col"><div class="frac">4/9</div><div class="bar"><div class="ok" style="height:44%"></div><div class="no" style="height:56%"></div></div><div class="lbl">00H</div></div>
+      <div class="col"><div class="frac">5/8</div><div class="bar"><div class="ok" style="height:63%"></div><div class="no" style="height:37%"></div></div><div class="lbl">01H</div></div>
+      <div class="col"><div class="frac">0/9</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div></div>
+      <div class="col"><div class="frac">2/8</div><div class="bar"><div class="ok" style="height:25%"></div><div class="no" style="height:75%"></div></div><div class="lbl">04H</div></div>
+      <div class="col"><div class="frac">3/8</div><div class="bar"><div class="ok" style="height:38%"></div><div class="no" style="height:62%"></div></div><div class="lbl">05H</div></div>
+      <div class="col"><div class="frac">0/7</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">06H</div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div></div>
+    </div>
   </div>
 </div>
-<h2>Pódio do turno</h2>
-<div class="podio"><div class="card"><div class="ptitle">Packing</div><div class="pn">Vitoria Lucas</div><div class="pv"><b>469</b> un · LÍQ. 229.8</div></div><div class="card"><div class="ptitle">Hu (Shipping)</div><div class="pn">Kaio Silva</div><div class="pv"><b>232</b> un · LÍQ. 163.0</div></div><div class="card"><div class="ptitle">Picking SIOC</div><div class="pn">Emerson Silva</div><div class="pv"><b>239</b> un · LÍQ. 107.0</div></div><div class="card"><div class="ptitle">Picking Leves</div><div class="pn">Kaio Silva</div><div class="pv"><b>275</b> un · LÍQ. 157.7</div></div><div class="card"><div class="ptitle">Picking Single RK</div><div class="pn">Emerson Silva</div><div class="pv"><b>140</b> un · LÍQ. 99.7</div></div><div class="card"><div class="ptitle">Picking Single Leves</div><div class="pn">Jailson Silva</div><div class="pv"><b>222</b> un · LÍQ. 100.0</div></div></div>
-<h2>Packing — meta 105 un/h</h2>
-<div class="tbl"><table><colgroup><col style="width:5%"/><col style="width:13%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:10%"/><col style="width:9%"/></colgroup>
-<tr><th>#</th><th>REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
-<tr><td><span class="med m1">1</span></td><td class="nome">Vitoria Lucas</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="g">167</td><td class="g">144</td><td class="g">158</td><td>229.8</td><td><b>469</b></td></tr>
-<tr><td><span class="med m2">2</span></td><td class="nome">Elaine Silva</td><td class="">-</td><td class="">-</td><td class="r">75</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>98.7</td><td><b>75</b></td></tr>
-<tr><td><span class="med m3">3</span></td><td class="nome">Renan Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">21</td><td class="r">2</td><td class="">-</td><td class="">-</td><td>111.1</td><td><b>23</b></td></tr>
-<tr class="total"><td></td><td class="nome">Total por hora / geral</td><td class="">-</td><td class="">-</td><td class="r">75</td><td class="">-</td><td class="">-</td><td class="r">21</td><td class="g">169</td><td class="g">144</td><td class="g">158</td><td>188.5</td><td>567</td></tr>
-</table></div><h2>Hu (Shipping) — meta 130 un/h</h2>
-<div class="tbl"><table><colgroup><col style="width:5%"/><col style="width:13%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:10%"/><col style="width:9%"/></colgroup>
-<tr><th>#</th><th>REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
-<tr><td><span class="med m1">1</span></td><td class="nome">Kaio Silva</td><td class="">6</td><td class="r">26</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">16</td><td class="y">126</td><td class="">-</td><td class="r">58</td><td>163.0</td><td><b>232</b></td></tr>
-<tr><td><span class="med m2">2</span></td><td class="nome">Yuri Albuquerque</td><td class="">16</td><td class="r">24</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">15</td><td class="y">121</td><td class="r">6</td><td class="r">40</td><td>152.5</td><td><b>222</b></td></tr>
-<tr><td><span class="med m3">3</span></td><td class="nome">Renan Silva</td><td class="">14</td><td class="r">42</td><td class="g">131</td><td class="r">28</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>184.4</td><td><b>215</b></td></tr>
-<tr><td>4</td><td class="nome">Gleybson Silva</td><td class="">-</td><td class="r">28</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">13</td><td class="r">80</td><td class="r">9</td><td class="">-</td><td>139.8</td><td><b>130</b></td></tr>
-<tr><td>5</td><td class="nome">Vitoria Lucas</td><td class="">24</td><td class="r">57</td><td class="r">24</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>664.6</td><td><b>105</b></td></tr>
-<tr><td>6</td><td class="nome">Jailson Silva</td><td class="">-</td><td class="r">19</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">14</td><td class="r">65</td><td class="">-</td><td class="">-</td><td>125.3</td><td><b>98</b></td></tr>
-<tr><td>7</td><td class="nome">Emerson Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">36</td><td class="">-</td><td class="">-</td><td>330.3</td><td><b>36</b></td></tr>
-<tr><td>8</td><td class="nome">Rodolfo Aureliano</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">1</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>76.9</td><td><b>1</b></td></tr>
-<tr class="total"><td></td><td class="nome">Total por hora / geral</td><td class="">60</td><td class="g">196</td><td class="g">155</td><td class="r">29</td><td class="">-</td><td class="r">58</td><td class="g">428</td><td class="r">15</td><td class="r">98</td><td>172.1</td><td>1039</td></tr>
-</table></div><h2>Picking SIOC — meta 75 un/h</h2>
-<div class="tbl"><table><colgroup><col style="width:5%"/><col style="width:13%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:10%"/><col style="width:9%"/></colgroup>
-<tr><th>#</th><th>REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
-<tr><td><span class="med m1">1</span></td><td class="nome">Emerson Silva</td><td class="">-</td><td class="r">24</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">44</td><td class="r">6</td><td class="g">94</td><td class="y">71</td><td>107.0</td><td><b>239</b></td></tr>
-<tr><td><span class="med m2">2</span></td><td class="nome">Deyvson Silva</td><td class="">-</td><td class="r">29</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">40</td><td class="y">73</td><td class="r">54</td><td class="r">20</td><td>78.0</td><td><b>216</b></td></tr>
-<tr><td><span class="med m3">3</span></td><td class="nome">Tailson Santana</td><td class="">-</td><td class="r">17</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">36</td><td class="r">59</td><td class="r">59</td><td class="r">44</td><td>74.5</td><td><b>215</b></td></tr>
-<tr><td>4</td><td class="nome">Ivan Silva</td><td class="">-</td><td class="r">27</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">17</td><td class="r">30</td><td class="r">41</td><td class="r">63</td><td>79.7</td><td><b>178</b></td></tr>
-<tr><td>5</td><td class="nome">Elaine Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">22</td><td class="r">52</td><td class="r">43</td><td class="r">35</td><td>66.1</td><td><b>152</b></td></tr>
-<tr><td>6</td><td class="nome">Cleiton Oliveira</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">35</td><td class="r">48</td><td class="r">45</td><td>82.7</td><td><b>128</b></td></tr>
-<tr><td>7</td><td class="nome">Taciana Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">29</td><td class="r">48</td><td class="">-</td><td class="">-</td><td>74.9</td><td><b>77</b></td></tr>
-<tr><td>8</td><td class="nome">Rodolfo Aureliano</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="r">31</td><td class="">-</td><td class="">-</td><td class="">-</td><td>66.2</td><td><b>31</b></td></tr>
-<tr class="total"><td></td><td class="nome">Total por hora / geral</td><td class="">-</td><td class="g">97</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="g">219</td><td class="g">303</td><td class="g">339</td><td class="g">278</td><td>79.9</td><td>1236</td></tr>
-</table></div><h2>Picking Leves</h2>
-<div class="tbl"><table><colgroup><col style="width:5%"/><col style="width:13%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:10%"/><col style="width:9%"/></colgroup>
-<tr><th>#</th><th>REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
-<tr><td><span class="med m1">1</span></td><td class="nome">Kaio Silva</td><td class="">-</td><td class="">-</td><td class="">101</td><td class="">109</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">43</td><td class="">22</td><td>157.7</td><td><b>275</b></td></tr>
-<tr><td><span class="med m2">2</span></td><td class="nome">Tailson Santana</td><td class="">-</td><td class="">-</td><td class="">109</td><td class="">138</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>175.1</td><td><b>247</b></td></tr>
-<tr><td><span class="med m3">3</span></td><td class="nome">Cleiton Oliveira</td><td class="">-</td><td class="">32</td><td class="">80</td><td class="">115</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>154.6</td><td><b>227</b></td></tr>
-<tr><td>4</td><td class="nome">Taciana Silva</td><td class="">-</td><td class="">29</td><td class="">67</td><td class="">3</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">81</td><td class="">33</td><td>118.1</td><td><b>213</b></td></tr>
-<tr><td>5</td><td class="nome">Deyvson Silva</td><td class="">-</td><td class="">-</td><td class="">82</td><td class="">111</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>141.5</td><td><b>193</b></td></tr>
-<tr><td>6</td><td class="nome">Emerson Silva</td><td class="">-</td><td class="">-</td><td class="">96</td><td class="">97</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>164.0</td><td><b>193</b></td></tr>
-<tr><td>7</td><td class="nome">Yuri Albuquerque</td><td class="">-</td><td class="">-</td><td class="">73</td><td class="">66</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">16</td><td class="">25</td><td>125.3</td><td><b>180</b></td></tr>
-<tr><td>8</td><td class="nome">Ivan Silva</td><td class="">-</td><td class="">-</td><td class="">91</td><td class="">57</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>128.4</td><td><b>148</b></td></tr>
-<tr><td>9</td><td class="nome">Elaine Silva</td><td class="">-</td><td class="">34</td><td class="">-</td><td class="">80</td><td class="">27</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>132.3</td><td><b>141</b></td></tr>
-<tr><td>10</td><td class="nome">Vitoria Lucas</td><td class="">-</td><td class="">-</td><td class="">11</td><td class="">17</td><td class="">76</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>100.6</td><td><b>104</b></td></tr>
-<tr><td>11</td><td class="nome">Rodolfo Aureliano</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">59</td><td class="">20</td><td>164.6</td><td><b>79</b></td></tr>
-<tr class="total"><td></td><td class="nome">Total por hora / geral</td><td class="">-</td><td class="">95</td><td class="">710</td><td class="">793</td><td class="">103</td><td class="">-</td><td class="">-</td><td class="">199</td><td class="">100</td><td>141.5</td><td>2000</td></tr>
-</table></div><h2>Picking Single RK</h2>
-<div class="tbl"><table><colgroup><col style="width:5%"/><col style="width:13%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:10%"/><col style="width:9%"/></colgroup>
-<tr><th>#</th><th>REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
-<tr><td><span class="med m1">1</span></td><td class="nome">Emerson Silva</td><td class="">-</td><td class="">21</td><td class="">-</td><td class="">-</td><td class="">4</td><td class="">55</td><td class="">60</td><td class="">-</td><td class="">-</td><td>99.7</td><td><b>140</b></td></tr>
-<tr><td><span class="med m2">2</span></td><td class="nome">Cleiton Oliveira</td><td class="">-</td><td class="">19</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">27</td><td class="">-</td><td class="">-</td><td class="">-</td><td>70.2</td><td><b>46</b></td></tr>
-<tr><td><span class="med m3">3</span></td><td class="nome">Tailson Santana</td><td class="">-</td><td class="">39</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>113.0</td><td><b>39</b></td></tr>
-<tr><td>4</td><td class="nome">Ivan Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">27</td><td class="">-</td><td class="">-</td><td class="">-</td><td>80.6</td><td><b>27</b></td></tr>
-<tr class="total"><td></td><td class="nome">Total por hora / geral</td><td class="">-</td><td class="">79</td><td class="">-</td><td class="">-</td><td class="">4</td><td class="">109</td><td class="">60</td><td class="">-</td><td class="">-</td><td>92.0</td><td>252</td></tr>
-</table></div><h2>Picking Single Leves</h2>
-<div class="tbl"><table><colgroup><col style="width:5%"/><col style="width:13%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:7%"/>
-<col style="width:10%"/><col style="width:9%"/></colgroup>
-<tr><th>#</th><th>REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
-<tr><td><span class="med m1">1</span></td><td class="nome">Jailson Silva</td><td class="">-</td><td class="">-</td><td class="">73</td><td class="">83</td><td class="">6</td><td class="">1</td><td class="">-</td><td class="">47</td><td class="">12</td><td>100.0</td><td><b>222</b></td></tr>
-<tr><td><span class="med m2">2</span></td><td class="nome">Gleybson Silva</td><td class="">-</td><td class="">-</td><td class="">85</td><td class="">44</td><td class="">3</td><td class="">-</td><td class="">-</td><td class="">23</td><td class="">20</td><td>98.9</td><td><b>175</b></td></tr>
-<tr><td><span class="med m3">3</span></td><td class="nome">Taciana Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">62</td><td class="">6</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td>90.7</td><td><b>68</b></td></tr>
-<tr><td>4</td><td class="nome">Renan Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">19</td><td class="">16</td><td>86.6</td><td><b>35</b></td></tr>
-<tr><td>5</td><td class="nome">Deyvson Silva</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">2</td><td class="">-</td><td class="">-</td><td class="">-</td><td>21.1</td><td><b>2</b></td></tr>
-<tr class="total"><td></td><td class="nome">Total por hora / geral</td><td class="">-</td><td class="">-</td><td class="">158</td><td class="">189</td><td class="">15</td><td class="">3</td><td class="">-</td><td class="">89</td><td class="">48</td><td>95.9</td><td>502</td></tr>
-</table></div>
-<h2>Quem bateu a meta, hora a hora</h2><h2>Packing — bateram x não bateram por hora (meta 105 un/h)</h2><div class="chart"><div class="col"><div class="lbl">0/0</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">23H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div><div class="col"><div class="lbl">0/0</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">00H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div><div class="col"><div class="lbl">0/1</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">01H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Elaine</div></div><div class="col"><div class="lbl">0/0</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">02H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div><div class="col"><div class="lbl">0/1</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">04H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Renan</div></div><div class="col"><div class="lbl">1/2</div>
-<div class="bar"><div class="red" style="height:50.0%"></div><div class="green" style="height:50.0%"></div></div>
-<div class="hr">05H</div>
-<div class="names g2"><b>Bateram</b><br>Vitoria</div>
-<div class="names r2"><b>Não bateram</b><br>Renan</div></div><div class="col"><div class="lbl">1/1</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:100.0%"></div></div>
-<div class="hr">06H</div>
-<div class="names g2"><b>Bateram</b><br>Vitoria</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div><div class="col"><div class="lbl">1/1</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:100.0%"></div></div>
-<div class="hr">07H</div>
-<div class="names g2"><b>Bateram</b><br>Vitoria</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div></div><h2>Hu (Shipping) — bateram x não bateram por hora (meta 130 un/h)</h2><div class="chart"><div class="col"><div class="lbl">0/5</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">23H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Kaio<br>Yuri<br>Renan<br>Vitoria<br>Jailson</div></div><div class="col"><div class="lbl">0/6</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">00H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Kaio<br>Yuri<br>Renan<br>Gleybson<br>Vitoria<br>Jailson</div></div><div class="col"><div class="lbl">1/2</div>
-<div class="bar"><div class="red" style="height:50.0%"></div><div class="green" style="height:50.0%"></div></div>
-<div class="hr">01H</div>
-<div class="names g2"><b>Bateram</b><br>Renan</div>
-<div class="names r2"><b>Não bateram</b><br>Vitoria</div></div><div class="col"><div class="lbl">0/2</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">02H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Renan<br>Rodolfo</div></div><div class="col"><div class="lbl">0/4</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">04H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Kaio<br>Yuri<br>Gleybson<br>Jailson</div></div><div class="col"><div class="lbl">0/5</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">05H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Kaio<br>Yuri<br>Gleybson<br>Jailson<br>Emerson</div></div><div class="col"><div class="lbl">0/2</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">06H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Yuri<br>Gleybson</div></div><div class="col"><div class="lbl">0/2</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">07H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Kaio<br>Yuri</div></div></div><h2>Picking SIOC — bateram x não bateram por hora (meta 75 un/h)</h2><div class="chart"><div class="col"><div class="lbl">0/0</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">23H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div><div class="col"><div class="lbl">0/4</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">00H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Emerson<br>Deyvson<br>Tailson<br>Ivan</div></div><div class="col"><div class="lbl">0/0</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">01H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div><div class="col"><div class="lbl">0/0</div>
-<div class="bar"><div class="red" style="height:0.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">02H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>-</div></div><div class="col"><div class="lbl">0/7</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">04H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Emerson<br>Deyvson<br>Tailson<br>Ivan<br>Elaine<br>Taciana<br>Rodolfo</div></div><div class="col"><div class="lbl">0/7</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">05H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Emerson<br>Deyvson<br>Tailson<br>Ivan<br>Elaine<br>Cleiton<br>Taciana</div></div><div class="col"><div class="lbl">1/6</div>
-<div class="bar"><div class="red" style="height:83.3%"></div><div class="green" style="height:16.7%"></div></div>
-<div class="hr">06H</div>
-<div class="names g2"><b>Bateram</b><br>Emerson</div>
-<div class="names r2"><b>Não bateram</b><br>Deyvson<br>Tailson<br>Ivan<br>Elaine<br>Cleiton</div></div><div class="col"><div class="lbl">0/6</div>
-<div class="bar"><div class="red" style="height:100.0%"></div><div class="green" style="height:0.0%"></div></div>
-<div class="hr">07H</div>
-<div class="names g2"><b>Bateram</b><br>-</div>
-<div class="names r2"><b>Não bateram</b><br>Emerson<br>Deyvson<br>Tailson<br>Ivan<br>Elaine<br>Cleiton</div></div></div>
-<div class="legenda"><b>Como ler:</b> valores = unidades processadas na hora, comparadas com a meta da hora (un/h): verde = bateu a meta; amarelo = faltando pouco (até 10% abaixo); vermelho = abaixo de 90% da meta. 23H sem cor de meta. LÍQ. = unidades / horas efetivas no turno.</div>
-</div></body></html>
+<div class="legenda">
+  <span><span class="sw" style="background:#00A650"></span>Bateram</span>
+  <span><span class="sw" style="background:#4a4a4a"></span>Não bateram</span>
+</div>
+
+<h2>Picking Single RK · sem meta</h2>
+<table>
+  <colgroup><col style="width:5%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:9%"></colgroup>
+  <tr><th>#</th><th class="nome">REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
+  <tr><td class="med">🥇</td><td class="nome">Wandry Silva</td><td class="n">–</td><td>73</td><td>78</td><td>13</td><td class="n">–</td><td>27</td><td>53</td><td>17</td><td class="n">–</td><td>77.1</td><td>261</td></tr>
+  <tr><td class="med">🥈</td><td class="nome">Tailson Santana</td><td class="n">–</td><td>67</td><td>32</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>90.5</td><td>99</td></tr>
+  <tr><td class="med">🥉</td><td class="nome">Deyvson Silva</td><td class="n">–</td><td>32</td><td class="n">–</td><td>2</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>58.2</td><td>34</td></tr>
+  <tr class="total"><td></td><td class="nome">Total</td><td>–</td><td>172</td><td>110</td><td>15</td><td>–</td><td>27</td><td>53</td><td>17</td><td>–</td><td>–</td><td>394</td></tr>
+</table>
+
+<h2>Picking Single Leves · sem meta</h2>
+<table>
+  <colgroup><col style="width:5%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:9%"></colgroup>
+  <tr><th>#</th><th class="nome">REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
+  <tr><td class="med">🥇</td><td class="nome">Wandry Silva</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>2</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>24.7</td><td>2</td></tr>
+  <tr><td class="med">🥈</td><td class="nome">Tailson Santana</td><td class="n">–</td><td class="n">–</td><td>2</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>22.7</td><td>2</td></tr>
+  <tr class="total"><td></td><td class="nome">Total</td><td>–</td><td>–</td><td>2</td><td>2</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>23.6</td><td>4</td></tr>
+</table>
+<p class="nota">Picking Leves (picking_continuous): sem operadores com unidades neste turno, por isso não há tabela.</p>
+
+<h2>Legenda</h2>
+<div class="legenda">
+  <span><span class="sw" style="background:#00A650"></span>Verde: unidades ≥ meta da hora</span>
+  <span><span class="sw" style="background:#FFE600"></span>Amarelo: unidades ≥ 90% da meta</span>
+  <span><span class="sw" style="background:#D9362B"></span>Vermelho: abaixo de 90% da meta</span>
+  <span><span class="sw" style="background:#333"></span>Sem cor: 23H, processos sem meta, ou sem registro (–)</span>
+</div>
+<p class="nota">Janela: 31/10 23H até 01/11 00H–07H (START_HOUR 0 a 7). Cada célula mostra as unidades da hora. LÍQ. = unidades / horas efetivas no turno. TOT = unidades no turno. Ordenação por TOT.</p>
+
+</main>
+</body>
+</html>
