@@ -6,52 +6,52 @@
 <title>Produtividade noite 01/11/2026</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23FFE600%22/%3E%3Cpath%20d%3D%22M32%2012%20L50%2021%20L50%2043%20L32%2052%20L14%2043%20L14%2021%20Z%22%20fill%3D%22%233483FA%22/%3E%3Cpath%20d%3D%22M14%2021%20L32%2030%20L50%2021%22%20fill%3D%22none%22%20stroke%3D%22%23FFE600%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M32%2030%20L32%2052%22%20stroke%3D%22%23FFE600%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M23%2016.5%20L41%2025.5%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.6%22/%3E%3C/svg%3E">
 <style>
+  :root{--bg:#ffffff;--fg:#111;--card:#ffffff;--border:#dcdcdc;--muted:#666;--sub:#444;--th:#f0f0f0;--tot:#f5f5f5;--accent:#1f5fbf;--dash:#aaa;--miss:#777;--tbl:#ffffff;--h2:#111;--cbg:#ffffff}
+  [data-theme=dark]{--bg:#1a1a1a;--fg:#eee;--card:#262626;--border:#3a3a3a;--muted:#999;--sub:#ccc;--th:#2f2f2f;--tot:#2c2c2c;--accent:#FFE600;--dash:#666;--miss:#999;--tbl:#222;--h2:#FFE600;--cbg:#222}
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#1a1a1a;color:#eee}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg)}
   header{background:#FFE600;color:#111;padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:16px}
   header h1{margin:0 0 6px;font-size:24px}
   header p{margin:0;font-size:14px}
-  header .dna{flex-basis:100%;width:100%;max-width:900px;display:block;margin-top:14px;order:3}
   header .hero{width:200px;height:auto;flex-shrink:0}
+  .tema{margin-top:10px;background:#111;color:#FFE600;border:0;border-radius:8px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer}
   main{max-width:1180px;margin:0 auto;padding:22px 16px 40px}
-  h2{font-size:17px;margin:30px 0 10px;color:#FFE600;border-bottom:1px solid #333;padding-bottom:6px}
+  h2{font-size:17px;margin:30px 0 10px;color:var(--h2);border-bottom:1px solid var(--border);padding-bottom:6px}
+  .dna-wrap{margin:0 0 6px}
+  .dna-wrap img{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
   .podio{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-  .card{background:#262626;border:1px solid #3a3a3a;border-radius:10px;padding:14px}
-  .card .proc{font-size:12px;color:#aaa;text-transform:uppercase;letter-spacing:.04em}
-  .card .rep{font-size:18px;font-weight:700;color:#FFE600;margin:6px 0 2px}
-  .card .lugar{font-size:12px;color:#ccc;margin-bottom:6px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px}
+  .card .proc{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .card .rep{font-size:18px;font-weight:700;color:var(--accent);margin:6px 0 2px}
+  .card .lugar{font-size:12px;color:var(--sub);margin-bottom:6px}
   .card .nums{font-size:14px}
-  table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;background:#222;margin-bottom:8px}
-  th,td{border:1px solid #333;padding:6px 4px;text-align:center}
-  th{background:#2f2f2f;color:#ddd;font-size:12px}
+  .tw{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;background:var(--tbl);color:var(--fg)}
+  th,td{border:1px solid var(--border);padding:6px 4px;text-align:center}
+  th{background:var(--th);color:var(--sub);font-size:12px}
   td.nome,th.nome{text-align:left;padding-left:8px}
-  tr.total td{background:#2c2c2c;font-weight:700}
+  tr.total td{background:var(--tot);font-weight:700}
   .g{background:#00A650;color:#fff}
   .y{background:#FFE600;color:#111}
   .r{background:#D9362B;color:#fff}
-  .n{color:#666}
+  .n{color:var(--dash)}
   .med{font-size:15px}
-  .nota{font-size:12px;color:#999;margin:4px 0 0}
-  .legenda{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin-top:10px;color:#ccc}
+  .nota{font-size:12px;color:var(--muted);margin:4px 0 0}
+  .legenda{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin-top:10px;color:var(--sub)}
   .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin-right:6px}
   .chart-wrap{display:grid;grid-template-columns:1fr;gap:14px}
-  .chart{background:#222;border:1px solid #333;border-radius:10px;padding:14px}
-  .chart h3{margin:0 0 10px;font-size:14px;color:#ddd}
-  .bars{display:flex;align-items:flex-end;gap:6px;height:130px;border-bottom:1px solid #444}
+  .chart{background:var(--cbg);border:1px solid var(--border);border-radius:10px;padding:14px}
+  .chart h3{margin:0 0 10px;font-size:14px;color:var(--fg)}
+  .bars{display:flex;align-items:flex-end;gap:6px;height:130px;border-bottom:1px solid var(--border)}
   .col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;min-width:0}
   .bar{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
   .bar .ok{background:#00A650}
   .bar .no{background:#4a4a4a}
-  .lbl{font-size:11px;color:#bbb;margin-top:4px}
-  .frac{font-size:11px;color:#eee;margin-bottom:3px;height:14px}
+  .lbl{font-size:11px;color:var(--sub);margin-top:4px}
+  .frac{font-size:11px;color:var(--fg);margin-bottom:3px;height:14px}
   .names{font-size:10px;line-height:1.35;text-align:center;margin-top:6px;width:100%;word-break:break-word;min-height:14px}
   .names .hit{color:#00A650;font-weight:700;display:block}
-  .names .miss{color:#999;display:block}
-
-  .dna-wrap{margin:0 0 6px}
-  .dna-wrap img{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
-  .tw{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:8px}
-  .tw table{margin-bottom:0}
+  .names .miss{color:var(--miss);display:block}
   @media (max-width:700px){
     header{flex-direction:column;padding:16px}
     header h1{font-size:19px}
@@ -75,6 +75,7 @@
   <div>
     <h1>Produtividade noite 01/11/2026</h1>
     <p>Turno D0 = 01/11/2026 · Janela: 31/10 23H até 01/11 06:59 · Manager: Jorrani / Guilherme</p>
+    <button class="tema" id="tema" type="button" onclick="(function(b){var d=document.documentElement;var dark=d.getAttribute('data-theme')==='dark';d.setAttribute('data-theme',dark?'light':'dark');b.textContent=dark?'🌙 Modo noturno':'☀️ Modo claro';})(this)">🌙 Modo noturno</button>
   </div>
   <svg class="hero" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Competição e trabalho em equipe">
     <!-- troféu -->
