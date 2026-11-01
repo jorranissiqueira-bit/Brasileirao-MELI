@@ -7,15 +7,17 @@
 <style>
   *{box-sizing:border-box}
   body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#1a1a1a;color:#eee}
-  header{background:#FFE600;color:#111;padding:22px 28px}
+  header{background:#FFE600;color:#111;padding:22px 28px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
   header h1{margin:0 0 6px;font-size:24px}
   header p{margin:0;font-size:14px}
+  header .hero{width:200px;height:auto;flex-shrink:0}
   main{max-width:1180px;margin:0 auto;padding:22px 16px 40px}
   h2{font-size:17px;margin:30px 0 10px;color:#FFE600;border-bottom:1px solid #333;padding-bottom:6px}
   .podio{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
   .card{background:#262626;border:1px solid #3a3a3a;border-radius:10px;padding:14px}
   .card .proc{font-size:12px;color:#aaa;text-transform:uppercase;letter-spacing:.04em}
-  .card .lugar{font-size:18px;font-weight:700;color:#FFE600;margin:6px 0}
+  .card .rep{font-size:18px;font-weight:700;color:#FFE600;margin:6px 0 2px}
+  .card .lugar{font-size:12px;color:#ccc;margin-bottom:6px}
   .card .nums{font-size:14px}
   table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;background:#222;margin-bottom:8px}
   th,td{border:1px solid #333;padding:6px 4px;text-align:center}
@@ -30,32 +32,58 @@
   .nota{font-size:12px;color:#999;margin:4px 0 0}
   .legenda{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin-top:10px;color:#ccc}
   .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin-right:6px}
-  .chart-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
+  .chart-wrap{display:grid;grid-template-columns:1fr;gap:14px}
   .chart{background:#222;border:1px solid #333;border-radius:10px;padding:14px}
   .chart h3{margin:0 0 10px;font-size:14px;color:#ddd}
-  .bars{display:flex;align-items:flex-end;gap:6px;height:150px;border-bottom:1px solid #444}
-  .col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%}
-  .bar{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;background:transparent}
+  .bars{display:flex;align-items:flex-end;gap:6px;height:130px;border-bottom:1px solid #444}
+  .col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;min-width:0}
+  .bar{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
   .bar .ok{background:#00A650}
   .bar .no{background:#4a4a4a}
   .lbl{font-size:11px;color:#bbb;margin-top:4px}
   .frac{font-size:11px;color:#eee;margin-bottom:3px;height:14px}
+  .names{font-size:10px;line-height:1.35;text-align:center;margin-top:6px;width:100%;word-break:break-word;min-height:14px}
+  .names .hit{color:#00A650;font-weight:700;display:block}
+  .names .miss{color:#999;display:block}
 </style>
 </head>
 <body>
 <header>
-  <h1>Produtividade noite 01/11/2026</h1>
-  <p>Turno D0 = 01/11/2026 · Janela: 31/10 23H até 01/11 06:59 · Manager: gmiller / jorssiqueira</p>
+  <div>
+    <h1>Produtividade noite 01/11/2026</h1>
+    <p>Turno D0 = 01/11/2026 · Janela: 31/10 23H até 01/11 06:59 · Manager: Jorrani / Guilherme</p>
+  </div>
+  <svg class="hero" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Competição e trabalho em equipe">
+    <!-- troféu -->
+    <path d="M78 22 h44 v22 a22 22 0 0 1 -44 0 Z" fill="#111"/>
+    <path d="M78 30 h-10 a10 10 0 0 0 10 18" fill="none" stroke="#111" stroke-width="4"/>
+    <path d="M122 30 h10 a10 10 0 0 1 -10 18" fill="none" stroke="#111" stroke-width="4"/>
+    <rect x="93" y="66" width="14" height="14" fill="#111"/>
+    <rect x="82" y="78" width="36" height="8" rx="3" fill="#111"/>
+    <path d="M100 30 l3 6 6 1 -4 4 1 6 -6 -3 -6 3 1 -6 -4 -4 6 -1 z" fill="#FFE600"/>
+    <!-- pessoas -->
+    <circle cx="36" cy="56" r="8" fill="#3483FA"/>
+    <path d="M22 100 Q22 68 36 66 Q50 68 50 100 Z" fill="#3483FA"/>
+    <circle cx="164" cy="56" r="8" fill="#00A650"/>
+    <path d="M150 100 Q150 68 164 66 Q178 68 178 100 Z" fill="#00A650"/>
+    <circle cx="100" cy="98" r="0" fill="#111"/>
+    <!-- estrelas/energia -->
+    <circle cx="60" cy="30" r="3" fill="#111"/>
+    <circle cx="142" cy="28" r="3" fill="#111"/>
+    <circle cx="150" cy="16" r="2" fill="#111"/>
+    <circle cx="52" cy="16" r="2" fill="#111"/>
+    <path d="M10 110 H190" stroke="#111" stroke-width="2" opacity=".25"/>
+  </svg>
 </header>
 <main>
 
 <h2>Pódio do turno</h2>
 <div class="podio">
-  <div class="card"><div class="proc">Packing</div><div class="lugar">1º lugar</div><div class="nums">304 un · LÍQ 133.1</div></div>
-  <div class="card"><div class="proc">Hu (Shipping)</div><div class="lugar">1º lugar</div><div class="nums">726 un · LÍQ 209.1</div></div>
-  <div class="card"><div class="proc">Picking SIOC</div><div class="lugar">1º lugar</div><div class="nums">561 un · LÍQ 118.8</div></div>
-  <div class="card"><div class="proc">Picking Single RK</div><div class="lugar">1º lugar</div><div class="nums">261 un · LÍQ 77.1</div></div>
-  <div class="card"><div class="proc">Picking Single Leves</div><div class="lugar">1º lugar</div><div class="nums">2 un · LÍQ 24.7</div></div>
+  <div class="card"><div class="proc">Packing</div><div class="rep">Cleide Santos</div><div class="lugar">1º lugar</div><div class="nums">304 un · LÍQ 133.1</div></div>
+  <div class="card"><div class="proc">Hu (Shipping)</div><div class="rep">Jose Amaral</div><div class="lugar">1º lugar</div><div class="nums">726 un · LÍQ 209.1</div></div>
+  <div class="card"><div class="proc">Picking SIOC</div><div class="rep">Emerson Silva</div><div class="lugar">1º lugar</div><div class="nums">561 un · LÍQ 118.8</div></div>
+  <div class="card"><div class="proc">Picking Single RK</div><div class="rep">Wandry Silva</div><div class="lugar">1º lugar</div><div class="nums">261 un · LÍQ 77.1</div></div>
+  <div class="card"><div class="proc">Picking Single Leves</div><div class="rep">Wandry Silva</div><div class="lugar">1º lugar</div><div class="nums">2 un · LÍQ 24.7</div></div>
 </div>
 
 <h2>Packing · meta 105 un/h</h2>
@@ -101,49 +129,49 @@
   <div class="chart">
     <h3>Packing (meta 105)</h3>
     <div class="bars">
-      <div class="col"><div class="frac">0/0</div><div class="bar"></div><div class="lbl">23H</div></div>
-      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">00H</div></div>
-      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">01H</div></div>
-      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div></div>
-      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">04H</div></div>
-      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">05H</div></div>
-      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">06H</div></div>
-      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div></div>
+      <div class="col"><div class="frac">0/0</div><div class="bar"></div><div class="lbl">23H</div><div class="names"></div></div>
+      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">00H</div><div class="names"><span class="miss">Cleide</span></div></div>
+      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">01H</div><div class="names"><span class="miss">Cleide</span></div></div>
+      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div><div class="names"><span class="miss">Cleide</span></div></div>
+      <div class="col"><div class="frac">0/1</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">04H</div><div class="names"><span class="miss">Cleide</span></div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">05H</div><div class="names"></div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">06H</div><div class="names"></div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div><div class="names"></div></div>
     </div>
   </div>
   <div class="chart">
     <h3>Hu (meta 130)</h3>
     <div class="bars">
-      <div class="col"><div class="frac">0/3</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">23H</div></div>
-      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">00H</div></div>
-      <div class="col"><div class="frac">2/4</div><div class="bar"><div class="ok" style="height:50%"></div><div class="no" style="height:50%"></div></div><div class="lbl">01H</div></div>
-      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div></div>
-      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">04H</div></div>
-      <div class="col"><div class="frac">1/5</div><div class="bar"><div class="ok" style="height:20%"></div><div class="no" style="height:80%"></div></div><div class="lbl">05H</div></div>
-      <div class="col"><div class="frac">0/6</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">06H</div></div>
-      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div></div>
+      <div class="col"><div class="frac">0/3</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">23H</div><div class="names"><span class="miss">Jose</span><span class="miss">Gleybson</span><span class="miss">Elaine</span></div></div>
+      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">00H</div><div class="names"><span class="miss">Jose</span><span class="miss">Gleybson</span><span class="miss">Kaio</span><span class="miss">Yuri</span></div></div>
+      <div class="col"><div class="frac">2/4</div><div class="bar"><div class="ok" style="height:50%"></div><div class="no" style="height:50%"></div></div><div class="lbl">01H</div><div class="names"><span class="hit">Jose</span><span class="hit">Gleybson</span><span class="miss">Kaio</span><span class="miss">Elaine</span></div></div>
+      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div><div class="names"><span class="miss">Jose</span><span class="miss">Gleybson</span><span class="miss">Kaio</span><span class="miss">Elaine</span></div></div>
+      <div class="col"><div class="frac">0/4</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">04H</div><div class="names"><span class="miss">Jose</span><span class="miss">Gleybson</span><span class="miss">Kaio</span><span class="miss">Elaine</span></div></div>
+      <div class="col"><div class="frac">1/5</div><div class="bar"><div class="ok" style="height:20%"></div><div class="no" style="height:80%"></div></div><div class="lbl">05H</div><div class="names"><span class="hit">Rodolfo</span><span class="miss">Jose</span><span class="miss">Gleybson</span><span class="miss">Kaio</span><span class="miss">Elaine</span></div></div>
+      <div class="col"><div class="frac">0/6</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">06H</div><div class="names"><span class="miss">Jose</span><span class="miss">Gleybson</span><span class="miss">Kaio</span><span class="miss">Elaine</span><span class="miss">Yuri</span><span class="miss">Joabe</span></div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div><div class="names"></div></div>
     </div>
   </div>
   <div class="chart">
     <h3>Picking SIOC (meta 75)</h3>
     <div class="bars">
-      <div class="col"><div class="frac">0/8</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">23H</div></div>
-      <div class="col"><div class="frac">4/9</div><div class="bar"><div class="ok" style="height:44%"></div><div class="no" style="height:56%"></div></div><div class="lbl">00H</div></div>
-      <div class="col"><div class="frac">5/8</div><div class="bar"><div class="ok" style="height:63%"></div><div class="no" style="height:37%"></div></div><div class="lbl">01H</div></div>
-      <div class="col"><div class="frac">0/9</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div></div>
-      <div class="col"><div class="frac">2/8</div><div class="bar"><div class="ok" style="height:25%"></div><div class="no" style="height:75%"></div></div><div class="lbl">04H</div></div>
-      <div class="col"><div class="frac">3/8</div><div class="bar"><div class="ok" style="height:38%"></div><div class="no" style="height:62%"></div></div><div class="lbl">05H</div></div>
-      <div class="col"><div class="frac">0/7</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">06H</div></div>
-      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div></div>
+      <div class="col"><div class="frac">0/8</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">23H</div><div class="names"><span class="miss">Emerson</span><span class="miss">Paulo</span><span class="miss">Rafaela</span><span class="miss">Joabe</span><span class="miss">Cleiton</span><span class="miss">Tailson</span><span class="miss">Deyvson</span><span class="miss">Wandry</span></div></div>
+      <div class="col"><div class="frac">4/9</div><div class="bar"><div class="ok" style="height:44%"></div><div class="no" style="height:56%"></div></div><div class="lbl">00H</div><div class="names"><span class="hit">Emerson</span><span class="hit">Paulo</span><span class="hit">Rafaela</span><span class="hit">Joabe</span><span class="miss">Cleiton</span><span class="miss">Tailson</span><span class="miss">Bruno</span><span class="miss">Deyvson</span><span class="miss">Wandry</span></div></div>
+      <div class="col"><div class="frac">5/8</div><div class="bar"><div class="ok" style="height:63%"></div><div class="no" style="height:37%"></div></div><div class="lbl">01H</div><div class="names"><span class="hit">Emerson</span><span class="hit">Paulo</span><span class="hit">Rafaela</span><span class="hit">Joabe</span><span class="hit">Cleiton</span><span class="miss">Tailson</span><span class="miss">Bruno</span><span class="miss">Deyvson</span></div></div>
+      <div class="col"><div class="frac">0/9</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">02H</div><div class="names"><span class="miss">Emerson</span><span class="miss">Paulo</span><span class="miss">Rafaela</span><span class="miss">Joabe</span><span class="miss">Cleiton</span><span class="miss">Tailson</span><span class="miss">Bruno</span><span class="miss">Deyvson</span><span class="miss">Wandry</span></div></div>
+      <div class="col"><div class="frac">2/8</div><div class="bar"><div class="ok" style="height:25%"></div><div class="no" style="height:75%"></div></div><div class="lbl">04H</div><div class="names"><span class="hit">Emerson</span><span class="hit">Paulo</span><span class="miss">Rafaela</span><span class="miss">Joabe</span><span class="miss">Cleiton</span><span class="miss">Tailson</span><span class="miss">Bruno</span><span class="miss">Deyvson</span></div></div>
+      <div class="col"><div class="frac">3/8</div><div class="bar"><div class="ok" style="height:38%"></div><div class="no" style="height:62%"></div></div><div class="lbl">05H</div><div class="names"><span class="hit">Emerson</span><span class="hit">Paulo</span><span class="hit">Rafaela</span><span class="miss">Joabe</span><span class="miss">Cleiton</span><span class="miss">Tailson</span><span class="miss">Bruno</span><span class="miss">Deyvson</span></div></div>
+      <div class="col"><div class="frac">0/7</div><div class="bar"><div class="no" style="height:100%"></div></div><div class="lbl">06H</div><div class="names"><span class="miss">Emerson</span><span class="miss">Paulo</span><span class="miss">Rafaela</span><span class="miss">Joabe</span><span class="miss">Cleiton</span><span class="miss">Tailson</span><span class="miss">Bruno</span></div></div>
+      <div class="col"><div class="frac"></div><div class="bar"></div><div class="lbl">07H</div><div class="names"></div></div>
     </div>
   </div>
 </div>
 <div class="legenda">
-  <span><span class="sw" style="background:#00A650"></span>Bateram</span>
-  <span><span class="sw" style="background:#4a4a4a"></span>Não bateram</span>
+  <span><span class="sw" style="background:#00A650"></span>Bateram (verde)</span>
+  <span><span class="sw" style="background:#4a4a4a"></span>Não bateram (cinza)</span>
 </div>
 
-<h2>Picking Single RK · sem meta</h2>
+<h2>Picking Single RK</h2>
 <table>
   <colgroup><col style="width:5%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:9%"></colgroup>
   <tr><th>#</th><th class="nome">REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
@@ -153,7 +181,7 @@
   <tr class="total"><td></td><td class="nome">Total</td><td>–</td><td>172</td><td>110</td><td>15</td><td>–</td><td>27</td><td>53</td><td>17</td><td>–</td><td>–</td><td>394</td></tr>
 </table>
 
-<h2>Picking Single Leves · sem meta</h2>
+<h2>Picking Single Leves</h2>
 <table>
   <colgroup><col style="width:5%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:9%"></colgroup>
   <tr><th>#</th><th class="nome">REPRESENTANTE</th><th>23H</th><th>00H</th><th>01H</th><th>02H</th><th>03H</th><th>04H</th><th>05H</th><th>06H</th><th>07H</th><th>LÍQ.</th><th>TOT</th></tr>
